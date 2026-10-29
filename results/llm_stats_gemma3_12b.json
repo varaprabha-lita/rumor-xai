@@ -1,0 +1,516 @@
+{
+ "Twitter15": {
+  "n": 200,
+  "methods": {
+   "BiGCN (grouped, out-of-fold)": {
+    "acc": 0.41,
+    "macro_f1": 0.3752874561714652,
+    "ci95": [
+     0.3093151738030434,
+     0.43963666001369806
+    ],
+    "f1_per_class": {
+     "non-rumor": 0.503,
+     "false": 0.447,
+     "true": 0.118,
+     "unverified": 0.433
+    },
+    "macro_f1_merged_true_nonrumor": 0.5107801635429688,
+    "confusion": [
+     [
+      40,
+      3,
+      2,
+      5
+     ],
+     [
+      25,
+      17,
+      2,
+      6
+     ],
+     [
+      28,
+      3,
+      4,
+      15
+     ],
+     [
+      16,
+      3,
+      10,
+      21
+     ]
+    ]
+   },
+   "LLM + propagation evidence": {
+    "acc": 0.495,
+    "macro_f1": 0.476051726051726,
+    "ci95": [
+     0.4024172810741123,
+     0.5431148296758664
+    ],
+    "f1_per_class": {
+     "non-rumor": 0.554,
+     "false": 0.556,
+     "true": 0.286,
+     "unverified": 0.509
+    },
+    "macro_f1_merged_true_nonrumor": 0.5948821548821549,
+    "confusion": [
+     [
+      36,
+      1,
+      3,
+      10
+     ],
+     [
+      13,
+      25,
+      2,
+      10
+     ],
+     [
+      23,
+      5,
+      10,
+      12
+     ],
+     [
+      8,
+      9,
+      5,
+      28
+     ]
+    ]
+   },
+   "LLM zero-shot, source": {
+    "acc": 0.425,
+    "macro_f1": 0.416035263974688,
+    "ci95": [
+     0.34841310303822426,
+     0.4840956869737078
+    ],
+    "f1_per_class": {
+     "non-rumor": 0.511,
+     "false": 0.405,
+     "true": 0.39,
+     "unverified": 0.358
+    },
+    "macro_f1_merged_true_nonrumor": 0.4861635220125786,
+    "confusion": [
+     [
+      34,
+      2,
+      4,
+      10
+     ],
+     [
+      15,
+      17,
+      3,
+      15
+     ],
+     [
+      20,
+      3,
+      15,
+      12
+     ],
+     [
+      14,
+      12,
+      5,
+      19
+     ]
+    ]
+   },
+   "LLM zero-shot, source + replies": {
+    "acc": 0.39,
+    "macro_f1": 0.3614417981561772,
+    "ci95": [
+     0.2948385995343092,
+     0.42888994613659087
+    ],
+    "f1_per_class": {
+     "non-rumor": 0.47,
+     "false": 0.347,
+     "true": 0.222,
+     "unverified": 0.407
+    },
+    "macro_f1_merged_true_nonrumor": 0.4745192111463609,
+    "confusion": [
+     [
+      35,
+      1,
+      1,
+      13
+     ],
+     [
+      21,
+      13,
+      2,
+      14
+     ],
+     [
+      28,
+      2,
+      7,
+      13
+     ],
+     [
+      15,
+      9,
+      3,
+      23
+     ]
+    ]
+   },
+   "Cascade words + LR (grouped, out-of-fold)": {
+    "acc": 0.42,
+    "macro_f1": 0.3977942347507565,
+    "ci95": [
+     0.33170713187127815,
+     0.45977122725757535
+    ],
+    "f1_per_class": {
+     "non-rumor": 0.571,
+     "false": 0.484,
+     "true": 0.203,
+     "unverified": 0.333
+    },
+    "macro_f1_merged_true_nonrumor": 0.4739926739926739,
+    "confusion": [
+     [
+      36,
+      2,
+      1,
+      11
+     ],
+     [
+      11,
+      22,
+      1,
+      16
+     ],
+     [
+      15,
+      10,
+      7,
+      18
+     ],
+     [
+      14,
+      7,
+      10,
+      19
+     ]
+    ]
+   }
+  },
+  "comparisons": {
+   "LLM + propagation evidence vs BiGCN (grouped, out-of-fold)": {
+    "delta_macro_f1": 0.10076426988026083,
+    "ci95": [
+     0.046959555718985566,
+     0.1580106031130256
+    ],
+    "mcnemar_only_a_correct": 25,
+    "mcnemar_only_b_correct": 8,
+    "mcnemar_p": 0.004551384132355452
+   },
+   "LLM + propagation evidence vs LLM zero-shot, source": {
+    "delta_macro_f1": 0.060016462077038035,
+    "ci95": [
+     -0.01994382632763569,
+     0.14181571024116116
+    ],
+    "mcnemar_only_a_correct": 37,
+    "mcnemar_only_b_correct": 23,
+    "mcnemar_p": 0.09246098107292373
+   },
+   "LLM + propagation evidence vs Cascade words + LR (grouped, out-of-fold)": {
+    "delta_macro_f1": 0.07825749130096954,
+    "ci95": [
+     -0.004931413298883437,
+     0.15371881051413167
+    ],
+    "mcnemar_only_a_correct": 38,
+    "mcnemar_only_b_correct": 23,
+    "mcnemar_p": 0.07217743850092258
+   },
+   "LLM zero-shot, source + replies vs LLM zero-shot, source": {
+    "delta_macro_f1": -0.05459346581851077,
+    "ci95": [
+     -0.11452666477324623,
+     0.0007268470627950659
+    ],
+    "mcnemar_only_a_correct": 12,
+    "mcnemar_only_b_correct": 19,
+    "mcnemar_p": 0.28104151505976915
+   }
+  },
+  "disagreement": {
+   "n": 54,
+   "llm_right": 25,
+   "gnn_right": 8
+  }
+ },
+ "Twitter16": {
+  "n": 200,
+  "methods": {
+   "BiGCN (grouped, out-of-fold)": {
+    "acc": 0.46,
+    "macro_f1": 0.4545476177256756,
+    "ci95": [
+     0.38044495134734785,
+     0.5238379626420719
+    ],
+    "f1_per_class": {
+     "non-rumor": 0.503,
+     "false": 0.313,
+     "true": 0.571,
+     "unverified": 0.43
+    },
+    "macro_f1_merged_true_nonrumor": 0.4739773225004473,
+    "confusion": [
+     [
+      37,
+      8,
+      0,
+      5
+     ],
+     [
+      23,
+      13,
+      3,
+      11
+     ],
+     [
+      17,
+      4,
+      22,
+      7
+     ],
+     [
+      20,
+      8,
+      2,
+      20
+     ]
+    ]
+   },
+   "LLM + propagation evidence": {
+    "acc": 0.465,
+    "macro_f1": 0.47111261793367665,
+    "ci95": [
+     0.39767793084814856,
+     0.5372332226278
+    ],
+    "f1_per_class": {
+     "non-rumor": 0.522,
+     "false": 0.373,
+     "true": 0.579,
+     "unverified": 0.411
+    },
+    "macro_f1_merged_true_nonrumor": 0.4951115511690478,
+    "confusion": [
+     [
+      30,
+      9,
+      2,
+      9
+     ],
+     [
+      15,
+      19,
+      1,
+      15
+     ],
+     [
+      13,
+      4,
+      22,
+      11
+     ],
+     [
+      7,
+      20,
+      1,
+      22
+     ]
+    ]
+   },
+   "LLM zero-shot, source": {
+    "acc": 0.4,
+    "macro_f1": 0.39340782721189843,
+    "ci95": [
+     0.32763840041156117,
+     0.45691988400549644
+    ],
+    "f1_per_class": {
+     "non-rumor": 0.427,
+     "false": 0.455,
+     "true": 0.272,
+     "unverified": 0.42
+    },
+    "macro_f1_merged_true_nonrumor": 0.5430874785591767,
+    "confusion": [
+     [
+      28,
+      3,
+      11,
+      8
+     ],
+     [
+      9,
+      20,
+      7,
+      14
+     ],
+     [
+      30,
+      2,
+      11,
+      7
+     ],
+     [
+      14,
+      13,
+      2,
+      21
+     ]
+    ]
+   },
+   "LLM zero-shot, source + replies": {
+    "acc": 0.385,
+    "macro_f1": 0.35372355677328915,
+    "ci95": [
+     0.28896967433544013,
+     0.41724255187357784
+    ],
+    "f1_per_class": {
+     "non-rumor": 0.466,
+     "false": 0.4,
+     "true": 0.125,
+     "unverified": 0.424
+    },
+    "macro_f1_merged_true_nonrumor": 0.5114629040121598,
+    "confusion": [
+     [
+      31,
+      3,
+      1,
+      15
+     ],
+     [
+      7,
+      17,
+      8,
+      18
+     ],
+     [
+      34,
+      2,
+      4,
+      10
+     ],
+     [
+      11,
+      13,
+      1,
+      25
+     ]
+    ]
+   },
+   "Cascade words + LR (grouped, out-of-fold)": {
+    "acc": 0.54,
+    "macro_f1": 0.539754793687378,
+    "ci95": [
+     0.46356958130706355,
+     0.6070407024512405
+    ],
+    "f1_per_class": {
+     "non-rumor": 0.548,
+     "false": 0.538,
+     "true": 0.556,
+     "unverified": 0.517
+    },
+    "macro_f1_merged_true_nonrumor": 0.5900971054854787,
+    "confusion": [
+     [
+      37,
+      8,
+      0,
+      5
+     ],
+     [
+      15,
+      28,
+      1,
+      6
+     ],
+     [
+      17,
+      8,
+      20,
+      5
+     ],
+     [
+      16,
+      10,
+      1,
+      23
+     ]
+    ]
+   }
+  },
+  "comparisons": {
+   "LLM + propagation evidence vs BiGCN (grouped, out-of-fold)": {
+    "delta_macro_f1": 0.016565000208001057,
+    "ci95": [
+     -0.04239030222077037,
+     0.07460297616583512
+    ],
+    "mcnemar_only_a_correct": 19,
+    "mcnemar_only_b_correct": 18,
+    "mcnemar_p": 1.0
+   },
+   "LLM + propagation evidence vs LLM zero-shot, source": {
+    "delta_macro_f1": 0.07770479072177822,
+    "ci95": [
+     0.0031644686992202626,
+     0.14654256613928843
+    ],
+    "mcnemar_only_a_correct": 34,
+    "mcnemar_only_b_correct": 21,
+    "mcnemar_p": 0.10478948242660333
+   },
+   "LLM + propagation evidence vs Cascade words + LR (grouped, out-of-fold)": {
+    "delta_macro_f1": -0.06864217575370135,
+    "ci95": [
+     -0.1486027373815849,
+     0.010951177732173639
+    ],
+    "mcnemar_only_a_correct": 24,
+    "mcnemar_only_b_correct": 39,
+    "mcnemar_p": 0.07692583360960925
+   },
+   "LLM zero-shot, source + replies vs LLM zero-shot, source": {
+    "delta_macro_f1": -0.03968427043860928,
+    "ci95": [
+     -0.09320371259368385,
+     0.014460166948873787
+    ],
+    "mcnemar_only_a_correct": 15,
+    "mcnemar_only_b_correct": 18,
+    "mcnemar_p": 0.7283324808813632
+   }
+  },
+  "disagreement": {
+   "n": 55,
+   "llm_right": 19,
+   "gnn_right": 18
+  }
+ }
+}

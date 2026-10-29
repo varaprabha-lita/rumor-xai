@@ -1,0 +1,12 @@
+# core (CPU is enough for everything except LLM embeddings / local LLM inference)
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.3
+torch>=2.1
+libarchive-c>=5.0        # only to unpack the reply archives
+
+# optional: stronger text encoders and the LLM step (GPU recommended)
+# sentence-transformers>=3.0
+# transformers>=4.44
+# accelerate>=0.33
+# bitsandbytes>=0.43     # 4-bit loading of 7-8B models on a 12-16 GB GPU

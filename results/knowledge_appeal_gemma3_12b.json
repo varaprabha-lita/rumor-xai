@@ -1,0 +1,19 @@
+{
+ "pattern": "widely (reported|documented)|fact-check|debunk|confirmed by|news (outlets|sources|reports) (confirm|report)|demonstrably|well-documented|numerous (news|reliable)",
+ "Twitter15": {
+  "n": 200,
+  "appeal_n": 34,
+  "appeal_frac": 0.17,
+  "acc_with_appeal": 0.5882352941176471,
+  "acc_without_appeal": 0.4759036144578313,
+  "mentions_propagation_frac": 0.88
+ },
+ "Twitter16": {
+  "n": 200,
+  "appeal_n": 49,
+  "appeal_frac": 0.245,
+  "acc_with_appeal": 0.5102040816326531,
+  "acc_without_appeal": 0.4503311258278146,
+  "mentions_propagation_frac": 0.91
+ }
+}

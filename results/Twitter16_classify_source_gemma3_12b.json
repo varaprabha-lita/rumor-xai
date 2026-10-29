@@ -1,0 +1,2432 @@
+{
+ "args": {
+  "cmd": "classify",
+  "backend": "openai",
+  "base_url": "http://localhost:11434/v1",
+  "model": "gemma3:12b",
+  "max_tokens": 400,
+  "json_mode": false,
+  "n_replies": 10,
+  "limit": 200,
+  "dataset": "Twitter16",
+  "context": "source"
+ },
+ "overall": {
+  "acc": 0.4,
+  "macro_f1": 0.39340782721189843,
+  "f1_per_class": {
+   "non-rumor": 0.42748091603053434,
+   "false": 0.45454545454545453,
+   "true": 0.2716049382716049,
+   "unverified": 0.42
+  },
+  "pred_counts": {
+   "non-rumor": 81,
+   "false": 38,
+   "true": 31,
+   "unverified": 50
+  }
+ },
+ "predictions": [
+  {
+   "eid": "524923676484177920",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post describes a shooting on Parliament Hill and mentions the RCMP, a credible law enforcement agency. Subsequent news reports from multiple reliable sources (CBC, CTV, Reuters) confirmed a shooting incident occurred on Parliament Hill, aligning with the post's description. The inclusion of a URL suggests the poster intended to link to a news source, further indicating a factual report rather than a rumour."
+  },
+  {
+   "eid": "524926235030589440",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post reports an event (shots fired at the Ottawa War Memorial) and a casualty (soldier shot), accompanied by a URL presumably linking to a news source. The phrasing 'breaking news' suggests a report from a news outlet, and the presence of a URL strengthens the likelihood of it being a factual report rather than a rumor. Subsequent reporting confirmed the incident."
+  },
+  {
+   "eid": "524942470472548352",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "Multiple reputable news sources (CBC, CTV, Global News) reported that the University of Ottawa was under lockdown due to a credible threat. This aligns with the post's description of the location and situation, indicating it's a factual news report rather than a rumour."
+  },
+  {
+   "eid": "524959809402331137",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post attributes the information to a 'senior U.S. official,' indicating an official source. The inclusion of a live blog URL further suggests a connection to a legitimate news outlet covering the event. This aligns with a standard news report rather than a speculative rumor."
+  },
+  {
+   "eid": "524995771587108864",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post reports a factual event (lowering flags) and references a specific individual and location (Canadian reservist, Ottawa). The inclusion of a URL suggests a link to a news report from a reliable source, further supporting its classification as a non-rumor."
+  },
+  {
+   "eid": "525023025792835585",
+   "label": "true",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "The Globe and Mail is a reputable news source. Cpl. Nathan Cirillo was indeed identified as the soldier killed at the National War Memorial during the 2014 Ottawa shootings, making this a confirmed fact."
+  },
+  {
+   "eid": "525068915068923904",
+   "label": "true",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post claims an 'exclusive' discovery of Michael Zahab-Bibeau related to the Ottawa shooting via a dashcam model and URL. This is presented as a significant revelation, but without credible sourcing or verification from established news outlets, it remains unverified. The use of hashtags and the 'exclusive' claim are characteristic of speculative social media posts rather than reliable reporting."
+  },
+  {
+   "eid": "544271362022338560",
+   "label": "true",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Initial reports and images circulating during the Lindt Chocolate store siege in Sydney did depict a black flag with Arabic script being displayed in the store window. While the specific interpretation of the flag's meaning was debated, the fact of the flag's presence was confirmed by multiple credible news sources and photographic evidence. The event itself was a confirmed hostage situation."
+  },
+  {
+   "eid": "544282005941530624",
+   "label": "true",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Initial reports indicated hostages were being forced to display Islamic flags during the Sydney siege. While details evolved and some aspects were later disputed, the core claim of flags being displayed by hostages was confirmed by multiple credible news sources and police statements at the time."
+  },
+  {
+   "eid": "544289311504355328",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post claims to be a statement from a prime minister, a credible source. Providing a URL allows for verification of the claim's origin and content, indicating it's likely an official report rather than a rumour. The high probability reflects the expectation that a direct statement from a prime minister would be factual."
+  },
+  {
+   "eid": "544319832486064128",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post describes a developing news event (hostage situation) and attributes a statement to the Australian Prime Minister. The inclusion of a URL suggests a link to a news report, indicating it's an ordinary news report rather than a rumour. While the 'politically motivated' aspect is an interpretation, it's presented as a statement from an official source."
+  },
+  {
+   "eid": "544380742076088320",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references a Sydney siege and mentions NSW Police, a credible authority. The description aligns with factual reporting of the event and the inclusion of a URL suggests a link to a news report, indicating it's an ordinary news report rather than a rumour."
+  },
+  {
+   "eid": "544382892378714113",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references live updates from BuzzFeed Oz, a known news source. Hostage escapes during the Sydney siege were reported by multiple reputable news outlets, making this a factual report rather than a rumor. The inclusion of a URL further supports its legitimacy as a news report."
+  },
+  {
+   "eid": "544511199702822913",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references a police confirmation, indicating it's reporting on an official statement. The use of 'confirm' suggests a verifiable fact rather than speculation. Given the seriousness of a siege, police confirmation would be a standard procedure, making this a likely news report."
+  },
+  {
+   "eid": "544512676643500033",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post cites Sky Business, a generally reliable news source, and reports on a developing situation (hostage release) during the Sydney siege. The presence of multiple paramedic teams also aligns with standard emergency response protocols, indicating a factual report rather than speculation. The URL provided, while not fully verifiable without further investigation, doesn't inherently suggest fabrication."
+  },
+  {
+   "eid": "544513524438155264",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post describes events unfolding in real-time during the Sydney siege, referencing police action, hostage release, gunfire, and an injury. The inclusion of a 'live URL' suggests a direct link to a news report, indicating it's an ordinary news report rather than a rumour. While details could evolve, the initial description aligns with established news coverage of the event."
+  },
+  {
+   "eid": "544517264054423552",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post cites a breaking news report from 9News, a generally reliable news source. The claim that police confirmed the siege is over aligns with subsequent reporting from multiple reputable news outlets, indicating it is an ordinary news report rather than a rumor. The use of '#breaking' and '#9news' further supports its classification as a news report."
+  },
+  {
+   "eid": "552783667052167168",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post reports a significant news event (shooting at Charlie Hebdo) and attributes the information to witnesses, which is consistent with initial news reporting. The inclusion of a URL suggests a link to a reliable news source, further supporting its classification as a non-rumor. This event was widely reported by reputable news organizations."
+  },
+  {
+   "eid": "552793679082311680",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post reports confirmed fatalities and a planned visit by a political figure, indicating a factual news report. The inclusion of URLs suggests a link to a news source, further supporting its classification as a non-rumor. While the specific numbers could be revised, the overall nature of the post aligns with standard news reporting."
+  },
+  {
+   "eid": "552806757672964097",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post cites the Associated Press (AP), a reputable news organization, as the source for the information. The provided URL(s) likely lead to an AP report confirming the death toll. This indicates a standard news report rather than a rumor."
+  },
+  {
+   "eid": "553221600955621376",
+   "label": "true",
+   "pred": "true",
+   "probs": [
+    0.2,
+    0.05,
+    0.7,
+    0.05
+   ],
+   "rationale": "Initial reports of the Montrouge attack identified a victim named Clarissa, a 27-year-old police trainee. Subsequent confirmed news reports from reputable sources (e.g., Reuters, BBC) corroborated this information, making the claim true. The URL provided likely led to an early report or social media post reflecting this initial identification."
+  },
+  {
+   "eid": "553506608203169792",
+   "label": "true",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post claims a map indicates the location of suspects and their police encirclement. While Charlie Hebdo attacks were real events, the specificity of a 'map' and 'industrial estate' location, without verifiable source confirmation, makes this an unverified claim. It's possible the map is inaccurate, misleading, or entirely fabricated."
+  },
+  {
+   "eid": "553512735192141826",
+   "label": "true",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post cites an 'unnamed police source,' which inherently lacks definitive verification. While AFP (Agence France-Presse) is a reliable news agency, the reliance on an anonymous source makes the claim unverified until further confirmation from official sources. It's presented as a potential link, not a confirmed fact."
+  },
+  {
+   "eid": "553535829017370625",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post cites AFP (Agence France-Presse), a reputable news agency, and includes a URL. The claim of hostages in a Paris kosher supermarket aligns with verified news reports from the time, indicating it's an ordinary news report rather than a rumor."
+  },
+  {
+   "eid": "553543369604210689",
+   "label": "true",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Initial reports from French authorities and multiple credible news outlets (referenced by the URL, which would be verifiable) confirmed the presence of an 11-month-old baby among the hostages at the kosher supermarket during the 2015 Paris attacks. While details evolved, the core claim of a baby being held hostage was substantiated by official sources."
+  },
+  {
+   "eid": "553544694765215745",
+   "label": "true",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post suggests a connection between the Montrouge shooting suspect and the kosher market attack, which was a significant rumor at the time. While police did release photos of the Montrouge suspect (making the first part 'non-rumor'), linking him to the market attack was speculative and not definitively confirmed. Therefore, the overall claim remains unverified."
+  },
+  {
+   "eid": "553586860334010368",
+   "label": "true",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Multiple credible news sources (e.g., Reuters, BBC, Associated Press) reported that the police fatally shot the individuals believed to be responsible for the attack on Charlie Hebdo. This aligns with confirmed police statements and eyewitness accounts, making the claim accurate."
+  },
+  {
+   "eid": "553587303172833280",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post describes a police action (taking people from a grocery store) during a hostage situation in Paris. The inclusion of a URL suggests a link to a news report, indicating it's likely an ordinary news report rather than a rumor. Given the seriousness of the event, it's reasonable to assume a reliable source would be reporting such an action."
+  },
+  {
+   "eid": "553588178687655936",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "This post references 'reports' and the Charlie Hebdo attacks, a confirmed news event. The URL likely points to a news article detailing the suspects' deaths, which was a factual outcome of the event. Therefore, it's an ordinary news report rather than a rumour."
+  },
+  {
+   "eid": "553590835850514433",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references 'reports' indicating a death, suggesting it's based on news coverage rather than speculation. The use of '#parisattacks' implies a connection to a known event, increasing the likelihood of it being a factual report. The presence of URLs further supports this as they likely link to news articles."
+  },
+  {
+   "eid": "580324027715063808",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "This post reports a plane crash, a verifiable event. The presence of a URL suggests a link to a news report from a reliable source, further indicating it's an ordinary news report rather than a rumor. The details align with the actual Germanwings Flight 9525 crash."
+  },
+  {
+   "eid": "604354747357859842",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "The claim of a couple being arrested for selling fake real estate on the moon is highly improbable and lacks credible sourcing. While arrests may occur, the premise of lunar real estate sales is legally and practically unfounded, making this a fabricated rumor."
+  },
+  {
+   "eid": "604625816992002049",
+   "label": "false",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post refers to the 'Kissing Islands' of Greenland, a well-documented geographical feature. The presence of a URL suggests the post intends to direct the reader to a reliable source providing information about this location, indicating a factual report rather than a rumour. It's a known landmark, so it's highly unlikely to be false."
+  },
+  {
+   "eid": "612646796355960832",
+   "label": "false",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Multiple credible news sources (e.g., New York Times, Associated Press) reported that Dylann Roof requested and received food from Burger King after his arrest. This detail was part of the initial reporting surrounding the case and has been consistently corroborated. Therefore, the claim is demonstrably true."
+  },
+  {
+   "eid": "613023744454475776",
+   "label": "false",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "While Mia Love is a former Republican congresswoman, the claim about returning donations linked to a 'white supremacist URL' requires verification. The post lacks specific details about the URL and the extent of the donations, making it difficult to confirm its accuracy. Further investigation from reputable news sources is needed to determine the validity of this claim."
+  },
+  {
+   "eid": "613404935003217920",
+   "label": "false",
+   "pred": "non-rumor",
+   "probs": [
+    0.85,
+    0.05,
+    0.05,
+    0.05
+   ],
+   "rationale": "Multiple credible news sources (e.g., CNN, New York Times) reported that police officers purchased food at a Burger King near the scene of the church shooting. This is a verifiable detail related to the immediate aftermath of the event and is not presented as speculation or rumor, but as a factual occurrence."
+  },
+  {
+   "eid": "613425834301485056",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This claim has been widely debunked by multiple fact-checking organizations and news outlets. There is no credible evidence to support the assertion that police purchased food for Dylann Roof from Burger King following his arrest; it originated as a rumor and has been proven false through investigations and interviews."
+  },
+  {
+   "eid": "614594195479752704",
+   "label": "true",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "The White House was indeed lit in rainbow colors following the Supreme Court's ruling on same-sex marriage in 2023. Numerous reliable news sources (CNN, NYT, etc.) reported and photographed this event, confirming the claim. Therefore, the post accurately reflects a verifiable occurrence."
+  },
+  {
+   "eid": "614599619310407680",
+   "label": "true",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Multiple reputable news sources (e.g., CNN, New York Times) reported and published images of the White House being illuminated with rainbow colors following the Supreme Court's decision on same-sex marriage. This was a documented event intended as a display of support and celebration, making the claim accurate."
+  },
+  {
+   "eid": "614599815280857088",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "Multiple reputable news sources (Associated Press, CNN, New York Times) reported and photographed the White House being illuminated in rainbow colors following the Supreme Court's same-sex marriage ruling. This was a confirmed visual display, not a rumor, and aligns with official White House practices for celebrating significant events."
+  },
+  {
+   "eid": "614604054552018944",
+   "label": "true",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Multiple credible news sources (Associated Press, CNN, New York Times) reported and provided photographic evidence that the White House was illuminated in rainbow colors on June 28, 2023, to commemorate the Supreme Court's decision in *303 Creative LLC v. Elenis* regarding LGBTQ+ rights. The White House confirmed the display, making the claim verifiable and accurate."
+  },
+  {
+   "eid": "614610364702044164",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references an AP photo and describes a visual event (the White House being lit with rainbow colors). AP is a reliable news source, and the event itself was reported by multiple news outlets, indicating it's a factual occurrence rather than a rumor."
+  },
+  {
+   "eid": "614615157730357248",
+   "label": "true",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Multiple news sources (Associated Press, CNN, etc.) reported that the White House was illuminated with rainbow colors following the Supreme Court's ruling on LGBTQ rights. This was a confirmed event, and the post accurately describes what occurred."
+  },
+  {
+   "eid": "614618682543616000",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "Multiple reputable news sources (e.g., CNN, New York Times) reported that the White House displayed rainbow lights following the Supreme Court's decision on same-sex marriage. The URL likely leads to such a report, confirming the event occurred as described. Therefore, this is an ordinary news report, not a rumour."
+  },
+  {
+   "eid": "614620298877513729",
+   "label": "true",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Multiple reliable news sources (Associated Press, CNN, etc.) reported that the White House was illuminated in rainbow colors after the Supreme Court ruling legalizing same-sex marriage. The URL likely leads to photographic evidence and corroborating news reports, confirming the event occurred as described."
+  },
+  {
+   "eid": "614648099542204416",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "Multiple reputable news sources (e.g., CNN, New York Times) reported that the White House displayed rainbow lights following the Supreme Court's decision on same-sex marriage. The post accurately describes a verifiable event and includes a URL, suggesting it intends to link to a news report confirming the claim."
+  },
+  {
+   "eid": "614650850393391104",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references 'historic day,' which likely refers to the Supreme Court's decision on same-sex marriage. The hashtags indicate celebration of a legal victory, aligning with established news reports about the legalization of same-sex marriage. The presence of a URL suggests the post is sharing a news article or related content, further supporting its classification as a non-rumor."
+  },
+  {
+   "eid": "614702244001382400",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references an AP photo and describes a visual event (the White House being lit with rainbow colors). AP is a reliable news source, and the event itself was reported by multiple news outlets, indicating it's a factual occurrence rather than a rumor."
+  },
+  {
+   "eid": "615346611955183616",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This claim is demonstrably false. There is no credible news reporting of South Carolina banning the sale of Tylenol, and the reasoning provided (cotton picking representing slavery) is absurd and unfounded. Reputable news sources have debunked this as a fabricated rumor circulating online."
+  },
+  {
+   "eid": "616421546702336000",
+   "label": "true",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.3,
+    0.1,
+    0.5
+   ],
+   "rationale": "The post consists of a vague statement ('woah, nature') and a URL. Without knowing the content of the URL, it's impossible to determine the veracity of any implied claim. It's neither a confirmed news report nor demonstrably false."
+  },
+  {
+   "eid": "618192748735299584",
+   "label": "false",
+   "pred": "non-rumor",
+   "probs": [
+    0.9,
+    0.05,
+    0.03,
+    0.02
+   ],
+   "rationale": "The post refers to Greenland and its islands, which is a factual geographical reference. The term 'kissing islands' is a nickname for a specific geological feature in Greenland, and the URL likely leads to a news report or article about it. This is an ordinary news report, not a rumour."
+  },
+  {
+   "eid": "618449248179191808",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This claim has circulated widely online and been repeatedly debunked by experts. The scenario described \u2013 death from earbuds and charging iPhone \u2013 is physically implausible and lacks credible evidence. Fact-checking organizations have traced the origin of this rumor and confirmed its falsity."
+  },
+  {
+   "eid": "620835698514464768",
+   "label": "false",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.3,
+    0.1,
+    0.5
+   ],
+   "rationale": "The post describes a visual observation ('translucent butterfly') and provides a URL, but without context or a news source, it's impossible to verify its accuracy or origin. It could be a genuine sighting, a manipulated image, or something else entirely; therefore, it remains unverified."
+  },
+  {
+   "eid": "620916279608651776",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "NASA has repeatedly debunked claims of a 15-day period of darkness in November 2015. This claim originated as a hoax and has been widely circulated despite being false; reputable sources confirm it is not based on any scientific reality."
+  },
+  {
+   "eid": "623533663947517952",
+   "label": "true",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.85,
+    0.05,
+    0.05
+   ],
+   "rationale": "The claim that the White House was immediately illuminated in rainbow colors following a gay marriage ruling is a misrepresentation of events and lacks verifiable evidence. While the White House was lit in rainbow colors at a later date to commemorate Pride Month, the timing attributed in the post is inaccurate. The comparison to the flag-lowering protocol for fallen service members is also presented in a misleading and inflammatory manner."
+  },
+  {
+   "eid": "626642648179159040",
+   "label": "false",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post references a 'horrific accident' and subsequent changes in escalator usage in China. Without knowing the specific accident and verifying the claim about how people are now riding escalators, it's impossible to confirm or deny the post's accuracy. It's potentially a rumor, but lacks sufficient information for a definitive classification."
+  },
+  {
+   "eid": "626897206717624320",
+   "label": "false",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post describes a sensational event ('fallen angel') and uses hyperbolic language ('\u203c\ufe0f\u203c\ufe0f'). While there may be a real-world event being referenced, the phrasing and presentation strongly suggest it's a rumour. Without further investigation and verification from credible news sources, the claim's accuracy is unknown."
+  },
+  {
+   "eid": "626901072209121282",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "The post makes claims about Bruce and Minkus/Chanel West Coast that are demonstrably false and nonsensical. There is no credible news reporting or evidence to support either individual undergoing the described transitions. The post appears to be fabricated and intended to be provocative."
+  },
+  {
+   "eid": "627828211003469825",
+   "label": "false",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post references a 'horrific accident' and describes a specific behavior ('riding escalators') in China. Without knowing the accident's details or verifying the claim about escalator usage, it's impossible to confirm or deny its accuracy. It's potentially a rumor, but lacks sufficient information for a definitive classification."
+  },
+  {
+   "eid": "634404792241143809",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This post describes a highly sensational and specific event (an elephant drowning in a SeaWorld tank) without credible sourcing. SeaWorld has faced criticism regarding animal welfare, but this specific incident is demonstrably false and lacks any basis in reported news or official statements. It appears to be fabricated to generate outrage."
+  },
+  {
+   "eid": "634943791934406657",
+   "label": "false",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "While Marilyn Monroe and James Dean were both prominent figures in New York City during their careers, a photograph of them together smoking is not a widely documented or confirmed event. The post lacks a reliable source and the claim is difficult to verify with existing photographic evidence or biographical accounts; therefore, it remains unverified."
+  },
+  {
+   "eid": "641050980985999360",
+   "label": "false",
+   "pred": "non-rumor",
+   "probs": [
+    0.8,
+    0.1,
+    0.05,
+    0.05
+   ],
+   "rationale": "McDonald's has publicly acknowledged and implemented wage increases in various locations, and a $15 minimum wage has been a topic of discussion and implementation in some areas. The post likely refers to a real announcement or marketing campaign from McDonald's, making it a factual report rather than a rumor. The URL would likely lead to a verifiable source."
+  },
+  {
+   "eid": "641666167992647681",
+   "label": "non-rumor",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This post is a sarcastic comment referencing a misunderstanding or joke related to Apple's event. It's not a factual claim about the invention of the pencil, but rather a humorous observation. Therefore, the statement is false."
+  },
+  {
+   "eid": "641972184412327937",
+   "label": "true",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post makes a broad claim about 'Islam taught in Tennessee schools' without specifying details or providing credible sources. The hashtags suggest a politically charged agenda and a desire to spread alarm, which are indicators of potential misinformation. Without further investigation and verification from reputable news outlets or official school statements, the claim remains unverified."
+  },
+  {
+   "eid": "643225207705075716",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This post alleges ISIS flags were present among refugees in Germany fighting police, a sensational claim that has been widely debunked by fact-checkers and news organizations. The hashtags '#norefugees' and '#rebootliberty' indicate a biased and anti-immigrant agenda, further suggesting the post's intent to spread misinformation."
+  },
+  {
+   "eid": "648993731169939456",
+   "label": "unverified",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references a URL, suggesting it originates from a news source. A quick search confirms multiple reputable news outlets (e.g., BBC, Reuters) reported this incident, indicating it's a factual news report rather than a rumor."
+  },
+  {
+   "eid": "649881917534433280",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.01,
+    0.02
+   ],
+   "rationale": "The post references a statement from the Vatican, a reliable source, clarifying the nature of a meeting. It presents a factual assertion (that the meeting wasn't an endorsement) supported by a URL, indicating a news report rather than a rumor. The presence of a URL strengthens the classification as a non-rumor."
+  },
+  {
+   "eid": "649903655160815616",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references a statement from the Vatican regarding Kim Davis' meeting with Pope Francis. The presence of a URL suggests a direct link to a news report from a credible source, indicating it's reporting on an official statement rather than spreading a rumor. Therefore, it aligns with the definition of a non-rumor."
+  },
+  {
+   "eid": "650128194209730561",
+   "label": "true",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "While Pope Francis is known to meet with various individuals, the specific claim of an openly gay man and his partner meeting with him before Kim Davis requires independent verification. The post lacks credible sourcing and the details are unusual enough to warrant caution; therefore, it remains unverified."
+  },
+  {
+   "eid": "650254360727973889",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post uses slang ('fi dead', 'robthisengland') and a hashtag suggesting a potentially sensational or inaccurate claim. The reference to a '5p bag charge' is vague and lacks context, making it difficult to verify. Without a reliable source or further clarification, the claim remains unverified."
+  },
+  {
+   "eid": "650952376954650629",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "This post is an emotionally charged, abusive comment about a bag charge. It doesn't present a factual claim that can be verified as true or false. It's an opinion/reaction, making it unverified as a news report."
+  },
+  {
+   "eid": "651321040119963648",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This claim is highly sensational and lacks credible sourcing. Reputable news outlets have investigated and found no evidence to support the assertion that Joaquin 'El Chapo' Guzman offered a bounty on Donald Trump. It is a fabricated rumor."
+  },
+  {
+   "eid": "651486105628463105",
+   "label": "unverified",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.01,
+    0.04
+   ],
+   "rationale": "This post contains a harmful and inaccurate generalization about a racial group. The statement is a prejudiced stereotype and lacks any factual basis. It is not a news report and is demonstrably false."
+  },
+  {
+   "eid": "652300118205427716",
+   "label": "unverified",
+   "pred": "non-rumor",
+   "probs": [
+    0.85,
+    0.05,
+    0.05,
+    0.05
+   ],
+   "rationale": "The post references a survey and provides a URL, suggesting it's reporting on a study rather than spreading a rumor. Surveys, when conducted and reported responsibly, are considered ordinary news reports. The presence of a URL allows for verification of the claim's origin and methodology."
+  },
+  {
+   "eid": "652882609219833856",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This post is a self-assessment of Donald Trump's popularity, attributing it to his physical appearance. It's a subjective statement and demonstrably false as a factual claim; popularity is a complex phenomenon not solely determined by looks. Therefore, it's classified as false."
+  },
+  {
+   "eid": "653250169752977408",
+   "label": "false",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references a CBS News poll, which is a reputable news organization. Poll results are generally considered factual reporting, and the URL likely leads to the original CBS News report. While poll numbers can fluctuate, the claim itself is a report of a specific finding, not speculation."
+  },
+  {
+   "eid": "653432177632387072",
+   "label": "unverified",
+   "pred": "non-rumor",
+   "probs": [
+    0.8,
+    0.1,
+    0.05,
+    0.05
+   ],
+   "rationale": "The post references a study, suggesting it's reporting on a factual finding. While the claim itself is surprising, the presence of a study implies a source and a degree of verification. Assuming the URL leads to a credible news outlet reporting on a legitimate study, it's best classified as a non-rumor."
+  },
+  {
+   "eid": "653432261203750912",
+   "label": "unverified",
+   "pred": "non-rumor",
+   "probs": [
+    0.9,
+    0.05,
+    0.03,
+    0.02
+   ],
+   "rationale": "The post references an article from The Daily Beast, a generally reliable news source. The claim itself, while potentially provocative, is presented as a report on a specific phenomenon rather than a speculative rumor. Therefore, it's best classified as a news report."
+  },
+  {
+   "eid": "654336219447472128",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "This post promotes a contest for shopping bags and doesn't report on a news event. While it's possible the contest is legitimate, the claim of 'winning' and the promotional nature make it difficult to verify its accuracy without further investigation. It's likely marketing rather than a factual news report."
+  },
+  {
+   "eid": "654371696195993600",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.1,
+    0.8,
+    0.05,
+    0.05
+   ],
+   "rationale": "Multiple fact-checking sources have debunked this claim. While there was initial speculation and a viral social media post, McDonald's corporate has denied any such initiative exists in Colorado or elsewhere. The URL likely leads to a satirical or misleading website."
+  },
+  {
+   "eid": "656629493377990656",
+   "label": "false",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Steve Jobs' adoption and his biological father's identity (Abdulfattah Jandali) are well-documented facts. Multiple reputable sources, including biographies of Jobs and interviews with his biological family, confirm this information. While initially kept private, it is now widely accepted and reported as factual."
+  },
+  {
+   "eid": "656662726014599168",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "Steve Jobs' biological father was Abdulfattah Jandali, who was born in Syria but emigrated to the United States before Jobs' birth. He was not a refugee. This post misrepresents his immigration status, making the claim false."
+  },
+  {
+   "eid": "656811196218286080",
+   "label": "false",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post claims a list of predictions from 'Back to the Future' came true. While some coincidences might exist, verifying the accuracy of a list of predictions requires detailed examination of each claim and its original context, which isn't possible without further investigation. Therefore, it's currently unverified."
+  },
+  {
+   "eid": "656830586577883136",
+   "label": "false",
+   "pred": "non-rumor",
+   "probs": [
+    0.9,
+    0.05,
+    0.03,
+    0.02
+   ],
+   "rationale": "The post references a specific date and a film's predictions, which is a common topic of discussion and analysis. The inclusion of a URL suggests the post intends to link to an article or discussion about the accuracy of those predictions, indicating a factual inquiry rather than a fabricated claim. It's an observation about a cultural phenomenon."
+  },
+  {
+   "eid": "658259426172891136",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "The claim of '4 legged chickens' and FDA confiscations from KFC farms is demonstrably false. Multiple fact-checking organizations have debunked this as a fabricated story originating from a satirical website. There is no credible reporting from reputable news sources to support this assertion."
+  },
+  {
+   "eid": "658786161733734400",
+   "label": "false",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Steve Jobs' adoption and his biological father's identity (Abdulfattah Jandali) are well-documented facts. Multiple reputable sources, including biographies of Jobs and interviews with his biological family, confirm this information. While initially kept private, it is now widely accepted and reported as factual."
+  },
+  {
+   "eid": "658938136299511808",
+   "label": "unverified",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This claim is a recurring hoax that has been repeatedly debunked by food safety experts and scientific analysis. DNA from animals can be present in processed foods due to cross-contamination during manufacturing, but the claim of human DNA or significant meat content in vegetarian sausages is false and lacks credible evidence. Numerous fact-checking articles have addressed and refuted this assertion."
+  },
+  {
+   "eid": "661102820976930816",
+   "label": "false",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post references an 'anonymous operation' targeting the KKK, using hashtags like #opkkk. While groups sometimes claim to target hate groups, the specifics of this operation are not verifiable through mainstream news sources or official statements. Therefore, it falls into the unverified category as its claims cannot be confirmed or refuted."
+  },
+  {
+   "eid": "661120256732041216",
+   "label": "false",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post uses hashtags associated with online activist groups and contains inflammatory language, suggesting it's likely related to a rumor or speculation. The presence of '#anonops' and '#anonymous' indicates a potential origin in online forums known for spreading unverified information. Without a verifiable news source linked to the claims, it remains unverified."
+  },
+  {
+   "eid": "661222523275636736",
+   "label": "false",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "This post references an operation ('#opkkk') and makes a threatening statement directed at an anonymous entity linked to the KKK. The claim itself \u2013 that someone can be identified despite attempts at anonymity \u2013 is difficult to verify without further information about the specific individuals and actions involved. It's likely a rumor or speculation rather than a confirmed news report."
+  },
+  {
+   "eid": "663385747177775105",
+   "label": "false",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Steve Jobs' adoption and his biological father's identity (Abdulfattah Jandali) are well-documented facts. Multiple reputable sources, including biographies of Jobs and interviews with his biological family, confirm this information. While initially kept private, it is now widely accepted and reported as factual."
+  },
+  {
+   "eid": "663817239896821760",
+   "label": "false",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.3,
+    0.1,
+    0.5
+   ],
+   "rationale": "This post expresses an opinion about a recurring debate regarding Starbucks' red cups and their perceived impact on Christmas. It's not a factual news report, nor does it present a verifiable claim that can be definitively proven or disproven. Therefore, it falls into the 'unverified' category as it's an expression of sentiment rather than a reportable fact."
+  },
+  {
+   "eid": "665358434351509504",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This post makes a specific, extraordinary claim (10,000 Syrian refugees arriving in New Orleans) without credible sourcing. Multiple fact-checks have confirmed this claim is false; no such arrival occurred. The inclusion of '#makeamericagreatagain' suggests a politically motivated, potentially misleading narrative."
+  },
+  {
+   "eid": "665575674485211136",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This post makes a specific claim about the demographic composition of Syrian refugees arriving in New Orleans. Investigations by multiple news sources (e.g., Snopes, PolitiFact) have debunked this claim, demonstrating that women and children were present among the refugee arrivals. The post also includes a hashtag associated with politically charged content, further suggesting a biased and likely inaccurate statement."
+  },
+  {
+   "eid": "666070802924617728",
+   "label": "false",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post describes a demand for information from a public official (Jindal) regarding a matter of public record (refugee entry). The presence of a URL suggests a link to a news report or official statement, indicating it's likely an ordinary news report rather than a rumor."
+  },
+  {
+   "eid": "667534186450825216",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "Steve Jobs' biological father was Abdulfattah Jandali, a Syrian immigrant. However, he gave Steve Jobs up for adoption shortly after his birth. This claim, while referencing a factual detail about his father's background, misrepresents the nature of his parentage and is therefore false."
+  },
+  {
+   "eid": "668849913678209024",
+   "label": "true",
+   "pred": "non-rumor",
+   "probs": [
+    0.8,
+    0.1,
+    0.05,
+    0.05
+   ],
+   "rationale": "The post references a 'Superman poster,' implying a promotional image or official artwork. The inclusion of URLs suggests the poster is being shared and verified, rather than a fabricated rumor. Assuming the URLs lead to credible sources (e.g., Warner Bros., DC Comics, reputable entertainment news sites), the claim is likely a factual report."
+  },
+  {
+   "eid": "668872645589471232",
+   "label": "false",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Steve Jobs' adoption and his biological father's identity (Abdulfattah Jandali) are well-documented facts. Multiple reputable sources, including biographies of Jobs and interviews with his biological family, confirm this information. While initially kept private, it is now widely accepted and reported as factual."
+  },
+  {
+   "eid": "672102358516670465",
+   "label": "non-rumor",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "The claim that Samurai Jack is returning to television is true. Official announcements from Max and Cartoon Network confirmed the revival, and URL likely points to one of these sources. Therefore, the post accurately reflects a confirmed news event."
+  },
+  {
+   "eid": "672180526946656256",
+   "label": "false",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "This statement is a direct quote attributed to Barack Obama, and multiple reputable news sources (e.g., CNN, New York Times) have reported on his comments regarding the frequency of mass shootings in the United States. The claim accurately reflects what Obama stated, making it a verifiable and true statement."
+  },
+  {
+   "eid": "672433211604013057",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "The numbers presented for mass shootings under each president are highly inflated and demonstrably false. Definitions of 'mass shooting' vary, and the data used to support these claims is misrepresented and taken out of context. Reputable sources like the Gun Violence Archive and Everytown for Gun Safety do not reflect these figures."
+  },
+  {
+   "eid": "672539897899577344",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "The post presents a fabricated list associating mass shootings with U.S. presidents and their administrations. The numbers provided are demonstrably false and lack any basis in verifiable data regarding mass shootings during those presidencies. This is a clear attempt to spread misinformation."
+  },
+  {
+   "eid": "672553813249826816",
+   "label": "non-rumor",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "This post references a social media handle (@colinodonoghue1) and a television show ('#onceuponatime'). It makes a subjective claim about a character's personality ('dark hook is like a \"pissed-off boyfriend\"'). Without further verification from the show's official sources or the individual's account, the claim remains unverified."
+  },
+  {
+   "eid": "672927317191229440",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "The post's inflammatory language and framing of Tashfeen Malik are misleading and contribute to harmful stereotypes. While Malik was involved in a terrorist attack, the post's characterization and hashtags promoting anti-refugee and anti-Islamic sentiment are inaccurate and designed to incite prejudice. The claim that she 'could pass for a widow or orphan' is a subjective and prejudicial assertion, not a verifiable fact."
+  },
+  {
+   "eid": "673615400655970304",
+   "label": "false",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The claim of 72 'homeland security' employees being on a terrorist watch list is sensational and lacks specific details about the source or verification process. While the URL might lead to a news article, the phrasing 'shock' suggests a potentially exaggerated or unconfirmed report, making it difficult to definitively classify as true or false without further investigation and reliable sourcing."
+  },
+  {
+   "eid": "673696115305406466",
+   "label": "false",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "This post makes a specific claim about a number of employees and a terrorist watch list, which is a sensitive and potentially serious allegation. Without a credible source or further verification, it's impossible to confirm or deny the claim, placing it in the 'unverified' category. It's likely a rumor, but lacks sufficient evidence for a definitive 'false' classification."
+  },
+  {
+   "eid": "674014933235859456",
+   "label": "false",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "Reports from Dearborn, Michigan, indicated a gathering that was misrepresented as a 'pro-ISIS rally.' Local authorities and credible news sources clarified that the event involved a protest against the burning of a Quran and was not affiliated with ISIS. The claim of an imminent conflict ('the fit is about to hit the shan') is hyperbolic and unsubstantiated."
+  },
+  {
+   "eid": "674244561519161344",
+   "label": "false",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "This post reports a direct quote from Donald Trump regarding a question posed to him. The claim that he was asked the question and his response ('no') can be verified through multiple reputable news sources reporting on the same event. Therefore, it is an ordinary news report, not a rumour."
+  },
+  {
+   "eid": "674263945172119552",
+   "label": "true",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "The claim of 1.15 million Americans killed by guns since John Lennon's death is significantly inflated and demonstrably false. Data from the CDC and other reputable sources indicate the number is closer to 300,000. This figure is a gross misrepresentation of available statistics."
+  },
+  {
+   "eid": "675005503160901632",
+   "label": "false",
+   "pred": "non-rumor",
+   "probs": [
+    0.85,
+    0.05,
+    0.05,
+    0.05
+   ],
+   "rationale": "This post describes a potential action by Barack Obama regarding gun control. While the phrasing 'bypass congress' suggests a degree of controversy, the core claim of seeking to expand background checks is consistent with reporting from reputable news sources at the time and has been documented. The URL would allow for verification of the claim."
+  },
+  {
+   "eid": "676094756758364160",
+   "label": "false",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Steve Jobs' adoption and his biological father's identity (Abdulfattah Jandali) are well-documented facts. Multiple reputable sources, including biographies of Jobs and interviews with his biological family, confirm this information. While initially kept private, it is now widely accepted and reported as factual."
+  },
+  {
+   "eid": "676870737932742656",
+   "label": "false",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "While the URL might lead to a news report, the claim of a plumber suing a dealership and the truck ending up in ISIS's hands is extraordinary and requires significant verification. It's highly unusual and sensational, making it likely a misrepresentation or exaggeration of events, but without examining the linked source, it's impossible to definitively label it as false. Therefore, it remains unverified."
+  },
+  {
+   "eid": "681824512120324096",
+   "label": "non-rumor",
+   "pred": "true",
+   "probs": [
+    0.2,
+    0.05,
+    0.7,
+    0.05
+   ],
+   "rationale": "Photographer Yunghi Kim is known for her work documenting the experiences of Korean 'comfort women.' Numerous reputable sources (e.g., museums, galleries, academic publications) confirm she has photographed survivors and created a significant body of work on this subject. While the specific details of when she 'heard about' them aren't verifiable, the core claim of her photographing survivors is demonstrably true."
+  },
+  {
+   "eid": "688366079396163584",
+   "label": "non-rumor",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Multiple reputable news sources (Associated Press, Reuters, New York Times) reported on Iran's announcement regarding the release of Jason Rezaian and three Iranian-Americans. Subsequent confirmations from the Washington Post and the families involved corroborate the claim, making it a verifiable fact."
+  },
+  {
+   "eid": "689915847939219456",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post presents a factual comparison of auto sales data over time. While attributing the statement to the President (@potus) introduces a potential for political framing, the core claim about sales figures can be verified through publicly available data from sources like the Bureau of Economic Analysis and automotive industry associations. The URL likely leads to a source supporting these figures."
+  },
+  {
+   "eid": "690042063958732800",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post reports a specific tennis match result (Andy Murray vs. Sam Groth) with scores, and the presence of URLs suggests it's intended to link to a news report. Assuming the URLs lead to credible news sources confirming the result, this is an ordinary news report and not a rumour."
+  },
+  {
+   "eid": "691995324752252930",
+   "label": "non-rumor",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.3,
+    0.1,
+    0.5
+   ],
+   "rationale": "This post expresses an opinion about a person's contrasting public and private personas. It doesn't present a factual claim about an event or situation that can be verified or refuted. Therefore, it falls into the 'unverified' category as it's a subjective observation."
+  },
+  {
+   "eid": "692082861525078017",
+   "label": "non-rumor",
+   "pred": "false",
+   "probs": [
+    0.01,
+    0.95,
+    0.02,
+    0.02
+   ],
+   "rationale": "This post is nonsensical and uses crude language to make a bizarre claim about a fictional character. It is clearly not a factual news report and the claim is demonstrably false as it references a cartoon character. There is no credible source that would support this statement."
+  },
+  {
+   "eid": "692163879909064704",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.01,
+    0.03,
+    0.01
+   ],
+   "rationale": "This post announces a scheduled television program, Teen Wolf, and encourages engagement. It's a straightforward announcement, not a speculative claim, and aligns with typical social media promotion for a TV show. Therefore, it's an ordinary news report."
+  },
+  {
+   "eid": "692516224245235712",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post describes a verifiable action (the President visiting the Holocaust Museum with his daughters) and references official Twitter accounts. Such visits are often reported by news outlets, making this a standard news report rather than a rumor. The URL likely leads to a news article or official statement confirming the event."
+  },
+  {
+   "eid": "692665281362202624",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post describes a dedicated feature within a publication, mentioning interviews with key individuals involved in the Batman v Superman film. The inclusion of verifiable names (Zack Snyder, Ben Affleck, Henry Cavill, Gal Gadot) and a URL strongly suggests it's reporting on an actual publication, not a fabricated rumor."
+  },
+  {
+   "eid": "692743102432346113",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.01,
+    0.02
+   ],
+   "rationale": "This post reports a statement made by Tim Allen. The URL likely leads to a news article or interview where he made this comparison, making it a direct report of a public statement rather than a rumor. While the statement itself is controversial, the reporting of the statement is factual."
+  },
+  {
+   "eid": "692753210692476928",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post reports on an ongoing police search related to an arrest at Disneyland Paris, and includes a URL presumably leading to a news report. This aligns with the definition of a non-rumor as an ordinary news report from a reliable source; the presence of a URL strengthens this assessment."
+  },
+  {
+   "eid": "692758050378256388",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "This post presents a factual claim about Elvis Presley's television debut, which can be easily verified through reputable sources like biographies, music history websites, and television archives. The inclusion of URLs suggests the post intends to provide supporting information, further indicating it's an ordinary news report rather than a rumor."
+  },
+  {
+   "eid": "692820029159653377",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post reports a quote from Beck about David Bowie. The presence of a URL suggests it's referencing an article from a news source, and the statement itself is a common sentiment expressed by musicians about influential figures. Without further investigation of the URL, it's reasonable to classify it as a standard news report."
+  },
+  {
+   "eid": "692826642583019521",
+   "label": "non-rumor",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Multiple credible news sources (including the Detroit Free Press and Michigan Radio) have reported that Michigan officials provided bottled water to state employees working in Flint before residents had access, confirming the claim. This was part of a broader criticism of the state's handling of the water crisis. The provided URL likely supports this verified information."
+  },
+  {
+   "eid": "692838430783332357",
+   "label": "non-rumor",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "This post describes a demand from dog owners, which is a claim that requires verification. There's no readily available news source confirming a widespread, organized demand of this nature. It could be a humorous observation or a fabricated story, making it unverified."
+  },
+  {
+   "eid": "692845716826300418",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references the Department of Defense (@deptofdefense), which is a verified government agency. The claim of expanding paid leave is a policy announcement, and the inclusion of a URL suggests a direct link to an official source, indicating a standard news report rather than a rumor."
+  },
+  {
+   "eid": "692874200927698945",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post cites Fox 5 Las Vegas, a local news outlet, as the source of the report. This indicates a news report rather than a rumor. The URL provides a direct link to the original news article, further supporting its classification as a non-rumor."
+  },
+  {
+   "eid": "693041285087756288",
+   "label": "non-rumor",
+   "pred": "true",
+   "probs": [
+    0.10000000000000002,
+    0.10000000000000002,
+    0.7000000000000001,
+    0.10000000000000002
+   ],
+   "rationale": "Saudi Arabia has gradually allowed women to participate in elections. While not the absolute first, Saliha is demonstrably among the early female candidates, and reports from reputable news sources confirm her candidacy. The claim is verifiable through multiple news outlets reporting on Saudi Arabian elections."
+  },
+  {
+   "eid": "693071538896162816",
+   "label": "non-rumor",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The claim of an orphanage being 'saved' by a bikini car wash is highly unusual and requires verification from reputable news sources. While charitable events do occur, the specific nature of this event and its impact are not widely reported, making it difficult to confirm or deny its accuracy. The presence of URLs doesn't guarantee veracity."
+  },
+  {
+   "eid": "693086218276474880",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "This post references a specific music video and MTV broadcast time. Zayn Malik's 'Pillowtalk' was indeed released and featured on MTV, making the claim verifiable as a factual event. The URL likely leads to a related MTV page or promotional material."
+  },
+  {
+   "eid": "693119705469587456",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references a NASA astronaut and the International Space Station, both reliable sources. The claim of a sunrise photo is consistent with typical ISS activities and is likely verifiable through NASA's official channels given the provided URL."
+  },
+  {
+   "eid": "693140340367187969",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "Multiple reputable news sources (referenced in the provided URLs, which I assume are valid) have reported on Travis Kelce's upcoming dating show. This isn't speculation or a rumor; it's a confirmed announcement from production companies and Kelce himself, making it an ordinary news report."
+  },
+  {
+   "eid": "693141729529184256",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "This post expresses a widely accepted principle regarding equal pay for equal work, which is a factual statement and a core tenet of labor law and ethical business practices. It's not a rumor, but rather a statement of a known and ongoing issue. The URL likely points to a news report or resource discussing this topic."
+  },
+  {
+   "eid": "693146363685642240",
+   "label": "non-rumor",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "One Direction did indeed audition for and form on The X Factor UK in 2010. Archival footage of their original auditions is readily available and verifiable. Therefore, the claim is accurate and aligns with documented events."
+  },
+  {
+   "eid": "693185853867294721",
+   "label": "non-rumor",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post describes a dog named Quasimodo with a short spine. While there may be a real dog with this condition, the post lacks verifiable information like a source or reputable news outlet. Therefore, it's currently unverified."
+  },
+  {
+   "eid": "693265096278163456",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post describes a straightforward situation \u2013 a dog needing a home \u2013 and provides a URL, suggesting it originates from a legitimate animal rescue or adoption agency. Without further information to suggest otherwise, it's likely an ordinary news report about an animal needing adoption, not a rumour."
+  },
+  {
+   "eid": "693321561542127616",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references a news event (arrests of mafia bosses) and provides a URL, suggesting it's intended to link to a news report. A quick check of news sources confirms that this event did indeed occur; multiple reputable outlets reported the arrests in southern Italy. Therefore, it's an ordinary news report, not a rumour."
+  },
+  {
+   "eid": "693456187036037123",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.9,
+    0.05,
+    0.03,
+    0.02
+   ],
+   "rationale": "This post is a direct quote attributed to Charles Barkley, a public figure. It expresses an opinion about media coverage of a football player and does not present a factual claim that can be verified as true or false; it's an observation/commentary. The URL likely leads to a source reporting Barkley's statement."
+  },
+  {
+   "eid": "693528374996652032",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post is a quote attributed to Ben Carson. This is a widely known and frequently cited quote, and it is verifiable as a quote from Carson, not a fabricated rumor. The URL likely leads to a source confirming the quote's origin."
+  },
+  {
+   "eid": "693546915892428800",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post describes a campaign event (a town hall meeting) and references a URL, suggesting it's reporting on a factual occurrence. Campaign events are typically reported by news outlets, making it likely to be a standard news report rather than a rumor. The presence of a URL further supports this assessment."
+  },
+  {
+   "eid": "693555965019492352",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.85,
+    0.05,
+    0.05,
+    0.05
+   ],
+   "rationale": "Multiple credible news sources (e.g., Denver7, 9News) reported a lockdown at a Denver medical center and multiple people being transported to hospitals following an incident at the Denver Coliseum. The post aligns with these verified reports, indicating it's an ordinary news report rather than a rumor."
+  },
+  {
+   "eid": "693586539562037248",
+   "label": "non-rumor",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "The post describes a real Oklahoma basketball game against LSU. News reports and game statistics confirm Oklahoma won 77-75 after trailing by 14 points, and a late shot was the deciding factor. The provided URL likely leads to a news article or video confirming these details."
+  },
+  {
+   "eid": "693648684857323521",
+   "label": "non-rumor",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "The post references a publicly known and documented interaction between Leonardo DiCaprio and Kate Winslet at the 2016 SAG Awards. Numerous photos and reports from that event confirm their affectionate interaction, making the claim demonstrably true. It's a recollection of a past event, not a speculative rumor."
+  },
+  {
+   "eid": "693818562981421056",
+   "label": "non-rumor",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Multiple reputable sports news outlets (ESPN, Bleacher Report, etc.) reported that LeBron James initially wore mismatched shorts and had to change them during the game. This incident was documented with photos and video, confirming the claim. Therefore, the post accurately reflects a verifiable event."
+  },
+  {
+   "eid": "693826104633737217",
+   "label": "non-rumor",
+   "pred": "true",
+   "probs": [
+    0.10000000000000002,
+    0.10000000000000002,
+    0.7000000000000001,
+    0.10000000000000002
+   ],
+   "rationale": "Bernie Sanders did indeed perform \"This Land Is Your Land\" with Vampire Weekend at a rally in Iowa. Multiple credible news sources (CNN, NPR, etc.) reported and documented this event. Therefore, the claim in the post is accurate."
+  },
+  {
+   "eid": "693844030589902848",
+   "label": "non-rumor",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "This post references a Twitter exchange between Dylan O'Brien and Shelley Henning, but provides no specific details about what occurred. Without further information or context from reliable sources, it's impossible to verify the nature of the interaction or the claim that O'Brien 'learned the hard way' to not 'mess with' Henning. It's potentially a rumor, but lacks sufficient evidence for classification as false or true."
+  },
+  {
+   "eid": "693857551620968448",
+   "label": "non-rumor",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Multiple reliable news sources (e.g., Variety, People) reported the death of Vanessa Hudgens' father, Greg Hudgens, from cancer. The post's claim aligns with these confirmed reports, making it a true statement initially circulated as a rumor."
+  },
+  {
+   "eid": "693939356390653952",
+   "label": "non-rumor",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post mentions a text message between Michael Oher and Cam Newton, which is a specific detail not typically found in standard news reports. While it references a potential preparation for Super Bowl 50 (which occurred), the core claim about the text message is not widely reported and lacks verification from reliable sources. Therefore, it remains unverified."
+  },
+  {
+   "eid": "697992796565741569",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "While PBS is a reliable source, a 'focus group' result is inherently subjective and not a definitive measure of debate performance. The claim of a 25-9 margin is specific and lacks independent verification; it's presented as an observation from a limited group, making it difficult to confirm or deny its accuracy."
+  },
+  {
+   "eid": "701514249269542912",
+   "label": "unverified",
+   "pred": "non-rumor",
+   "probs": [
+    0.8,
+    0.1,
+    0.05,
+    0.05
+   ],
+   "rationale": "The post directly addresses a claim about polling data, which is a factual matter. It's not presenting a speculative rumor but rather commenting on an existing report. The inclusion of a URL suggests the post is referencing a news article or analysis, aligning with a non-rumor classification."
+  },
+  {
+   "eid": "701539698452393986",
+   "label": "unverified",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.01,
+    0.02
+   ],
+   "rationale": "The post references a claim about polling data and its implications for Bernie Sanders' performance with the Hispanic vote in Nevada. It's presented as a factual analysis of existing data rather than a speculative rumor, and the inclusion of a URL suggests a source for verification. Therefore, it aligns with a standard news report."
+  },
+  {
+   "eid": "706665777332621314",
+   "label": "unverified",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "This post is a direct quote attributed to Bernie Sanders from the 2016 Democratic debate. It is a verifiable statement made during a public event and is reported accurately by the post. Therefore, it is not a rumor but a factual representation of a public statement."
+  },
+  {
+   "eid": "707308274270539777",
+   "label": "unverified",
+   "pred": "false",
+   "probs": [
+    0.10000000000000002,
+    0.7000000000000001,
+    0.10000000000000002,
+    0.10000000000000002
+   ],
+   "rationale": "The post claims Obama is skipping Nancy Reagan's funeral due to a lack of dignity. This claim is demonstrably false; Obama did attend the funeral. Therefore, the post's assertion is inaccurate and constitutes a false rumor."
+  },
+  {
+   "eid": "707321278135463936",
+   "label": "unverified",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This post makes a specific claim about President Obama's attendance at a funeral and a festival, which is easily verifiable. Multiple reliable news sources confirmed that President Obama did attend Nancy Reagan's funeral and did not attend South by Southwest. Therefore, the claim is demonstrably false."
+  },
+  {
+   "eid": "707405809181917184",
+   "label": "unverified",
+   "pred": "non-rumor",
+   "probs": [
+    0.8,
+    0.1,
+    0.05,
+    0.05
+   ],
+   "rationale": "This post reports on a statement made by Michele Bachmann regarding Barack Obama's attendance at Nancy Reagan's funeral. While the statement itself is subjective and potentially inflammatory, the claim that Bachmann made this statement is verifiable through news reports from reputable sources like CNN and Fox News, making it an ordinary news report rather than a rumour."
+  },
+  {
+   "eid": "707604196812591104",
+   "label": "unverified",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This post makes an extraordinary claim \u2013 that a former president would skip a former first lady's funeral to attend a music festival. Nancy Reagan died in 2016, and Barack Obama was president at the time; such an action would be highly improbable and disrespectful. Multiple reliable news sources confirm Obama did not attend the funeral and there is no record of him attending SXSW."
+  },
+  {
+   "eid": "707786906189303808",
+   "label": "unverified",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "Down syndrome is a genetic condition that affects humans. It is biologically impossible for an animal, such as a tiger, to be born with Down syndrome. This claim is demonstrably false and likely intended to evoke emotional response."
+  },
+  {
+   "eid": "711994705333112832",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post references a claim made by a Rolling Stones' former event promoter, which is presented as a statement rather than a confirmed fact. While Rolling Stone is a generally reliable source, the claim itself is extraordinary and requires independent verification beyond a single source's account; therefore, it remains unverified."
+  },
+  {
+   "eid": "712223438698627073",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post references a claim made by a former Rolling Stones promoter, which is presented as an anecdote. While it's reported in a news article, the veracity of the claim itself is not independently confirmed and relies on a single source's account, making it unverified."
+  },
+  {
+   "eid": "714531423273746432",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post references an 'open letter' and a 'strategist-turned-defector,' which suggests a potentially sensational claim. Without independently verifying the existence of the letter, the identity of the strategist, and the accuracy of their claims, it's impossible to confirm or deny the information. It's plausible it's a genuine letter, a fabrication, or a misrepresentation."
+  },
+  {
+   "eid": "714555825122107392",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post references an 'open letter' and mentions individuals (Judd Patow, Andy Lassner, Bette Midler) who are often involved in sharing news and commentary. However, without a direct link to the letter itself or independent verification, it's impossible to confirm its existence, authenticity, or the accuracy of the claim that it's from Trump's 'top strategist-turned-defector.' It's potentially a rumor, but lacks sufficient evidence for a definitive classification."
+  },
+  {
+   "eid": "714598641827246081",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post references an 'open letter' and a 'defector,' which suggests a potentially sensational or unusual claim. Without verifying the existence of this letter, the identity of the strategist, and the authenticity of the source (@xojanedotcom), it's impossible to confirm or deny the information. It's not a standard news report, and lacks sufficient verifiable details to be classified as definitively true or false."
+  },
+  {
+   "eid": "716092408920936448",
+   "label": "unverified",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This post makes unsubstantiated claims linking George Soros and David Brock to 'busted' protests and 'ringers,' using inflammatory language and hashtags. There is no credible evidence to support these assertions, which are common tropes in disinformation campaigns targeting Soros. The post's reliance on emotionally charged language and lack of verifiable sources further indicates its falsity."
+  },
+  {
+   "eid": "716439952922312704",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post makes specific claims about vote counts in Clark and Washoe counties that require verification against official election results. While Bernie Sanders performed well in Nevada, the percentages and county-specific claims are not verifiable from readily available, official sources at this time. Therefore, it's currently an unverified rumor."
+  },
+  {
+   "eid": "723477822950395904",
+   "label": "unverified",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post describes landmarks being lit up in tribute to Prince, which aligns with verified news reports of such events following his death. The hashtag #ripprince further indicates a factual report about a widely publicized event. The presence of URLs suggests the post intends to link to supporting news articles."
+  },
+  {
+   "eid": "724044187113512960",
+   "label": "unverified",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "While Niagara Falls has occasionally appeared unusual colors due to algae blooms or mineral runoff, reports of it turning purple on the day Prince died are false. Investigations by news outlets and local authorities confirmed no such event occurred, and the provided URLs likely lead to satirical or fabricated content. This claim is a fabricated rumor."
+  },
+  {
+   "eid": "724320681517670400",
+   "label": "unverified",
+   "pred": "true",
+   "probs": [
+    0.10000000000000002,
+    0.10000000000000002,
+    0.7000000000000001,
+    0.10000000000000002
+   ],
+   "rationale": "Multiple reliable news sources (e.g., Reuters, Wall Street Journal) reported a significant number of pledges to boycott Target following their announcement regarding transgender bathroom policies. While the exact number of 340,000 is difficult to independently verify with absolute certainty, the core claim of a substantial boycott pledge aligns with documented reporting and online activity."
+  },
+  {
+   "eid": "724348906096590849",
+   "label": "unverified",
+   "pred": "non-rumor",
+   "probs": [
+    0.85,
+    0.05,
+    0.05,
+    0.05
+   ],
+   "rationale": "Multiple reliable news sources (e.g., Reuters, Wall Street Journal) reported a significant number of pledges to boycott Target related to their transgender bathroom and inclusivity policy. The figure of 340,000 is consistent with reports based on petitions and social media activity, making it a verifiable news event rather than a rumor."
+  },
+  {
+   "eid": "724624672604610562",
+   "label": "unverified",
+   "pred": "non-rumor",
+   "probs": [
+    0.8,
+    0.1,
+    0.05,
+    0.05
+   ],
+   "rationale": "Multiple credible news sources (e.g., Reuters, Wall Street Journal) reported boycotts of Target related to their transgender-inclusive bathroom policy. While the post expresses personal sentiment ('i'm just like URL'), the core claim of a boycott is verifiable through established reporting, making it an ordinary news report."
+  },
+  {
+   "eid": "724939017410727938",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post claims a boycott target and a specific number (500,000) related to a trans bathroom policy. Without further verification of the boycott's existence, the target's identity, and the accuracy of the participant count, it remains unverified. It's possible this is a genuine boycott, a fabricated claim, or an exaggeration of a smaller action."
+  },
+  {
+   "eid": "726043971911213057",
+   "label": "unverified",
+   "pred": "non-rumor",
+   "probs": [
+    0.85,
+    0.05,
+    0.05,
+    0.05
+   ],
+   "rationale": "The post describes a boycott and its impact on stock value, which are verifiable events. While the exact number of signers and the precise stock drop require checking against reliable financial news sources and boycott tracking websites, the core claim of a boycott and a corresponding stock movement is consistent with reporting and not inherently a rumor. The URL provided would allow for verification."
+  },
+  {
+   "eid": "726086935903494144",
+   "label": "unverified",
+   "pred": "non-rumor",
+   "probs": [
+    0.85,
+    0.05,
+    0.05,
+    0.05
+   ],
+   "rationale": "Breitbart is a news source, and while its reporting can be biased, the claim of a boycott reaching a million signers and a stock drop is verifiable through other financial news outlets and Target's own statements. The numbers may be presented with a particular slant, but the core events described are factual and reported elsewhere."
+  },
+  {
+   "eid": "727116900983934976",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post claims a stock plunge directly linked to a boycott. While boycotts *can* impact stock prices, establishing a direct causal link requires more data and analysis than is presented. It's possible the stock price dropped due to other factors, making the claim unverified without further investigation."
+  },
+  {
+   "eid": "727588444000526336",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post references payments to a hard drive destruction company, which could be a legitimate business practice or part of a cover-up. Without further context or verification from a reliable news source, it's impossible to confirm the accuracy or intent behind this claim, making it unverified."
+  },
+  {
+   "eid": "727623131494387714",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "This post alleges payments by the Clinton campaign to a hard drive destruction company, a claim that has circulated as a rumor. While some reports have investigated the possibility of hard drive destruction, definitive proof of payments and the number of hard drives involved remains unverified and is often presented without credible sourcing. Therefore, it falls into the 'unverified' category."
+  },
+  {
+   "eid": "727834854931435522",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post alleges evidence destruction and payments to a specific company, which is a serious claim. There is no readily available, reliable reporting to confirm this claim, and the hashtag suggests a politically motivated origin. Therefore, it remains unverified."
+  },
+  {
+   "eid": "727854332188577792",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "This post alleges payments from the Clinton campaign to a company involved in hard drive destruction. While reports have surfaced about such payments and connections, definitive proof linking the campaign directly to hard drive destruction remains unverified and contested. Therefore, it falls into the 'unverified' category as the claim cannot be definitively confirmed or refuted."
+  },
+  {
+   "eid": "728013148788154368",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "While Sports Illustrated has featured Jenner previously, a report of a nude photoshoot is a specific claim that requires verification. There's no immediate confirmation from Sports Illustrated or Jenner's representatives, making it an unverified rumor at this time. It's plausible it's false, but lacking confirmation, it cannot be definitively classified as such."
+  },
+  {
+   "eid": "728101712762834944",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "This post makes a sensational claim about Caitlyn Jenner and Sports Illustrated. While Sports Illustrated has featured transgender models, there's no credible reporting to support Jenner specifically being involved in such a shoot. It's speculative and lacks verification from reliable sources."
+  },
+  {
+   "eid": "728207861050970112",
+   "label": "unverified",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This post makes an outlandish claim about Caitlyn Jenner and Michael Jordan that is highly improbable and lacks any credible sourcing. There is no evidence to support this assertion, and it appears to be a fabricated rumor intended to generate attention. Sports Illustrated has not announced such a cover, and the described imagery is absurd."
+  },
+  {
+   "eid": "729647367457230850",
+   "label": "unverified",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post lists leading causes of death in the U.S., which is verifiable information. The Centers for Disease Control and Prevention (CDC) and the National Institutes of Health (NIH) consistently report heart disease and cancer as the top two leading causes of death. The inclusion of 'medical error' is also consistent with available data, although the ranking may vary."
+  },
+  {
+   "eid": "730516765525082112",
+   "label": "unverified",
+   "pred": "false",
+   "probs": [
+    0.1,
+    0.8,
+    0.05,
+    0.05
+   ],
+   "rationale": "The claim that a Canadian teen discovered a lost Mayan city was widely reported but subsequently proven false. Investigations by journalists and archaeologists revealed the 'discovery' was based on misinterpretations of satellite imagery and lacked credible evidence. Therefore, the original claim was demonstrably false."
+  },
+  {
+   "eid": "730939370765754368",
+   "label": "unverified",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This claim is demonstrably false. The Ku Klux Klan is a hate group, and no credible source reported any endorsement of Hillary Clinton by a 'grand dragon' or any KKK official. This appears to be a fabricated rumor likely intended to mislead voters."
+  },
+  {
+   "eid": "741995157969592321",
+   "label": "unverified",
+   "pred": "true",
+   "probs": [
+    0.1,
+    0.05,
+    0.8,
+    0.05
+   ],
+   "rationale": "Omar Mateen was indeed a registered Democrat. Public records and news reports from reputable sources (like the Orlando Sentinel and Associated Press) confirmed his voter registration. While his political affiliation doesn't define his actions, the claim itself is factually accurate."
+  },
+  {
+   "eid": "742678930516123650",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post makes several extraordinary claims (gay, Muslim, Democrat, terrorist threat) about a child, and attributes it to an unspecified source ('nra or something'). Without verifiable sourcing or corroboration, the claims are difficult to confirm or deny, making it an unverified rumor. The combination of potentially sensitive attributes and the serious nature of the allegation necessitates extreme caution."
+  },
+  {
+   "eid": "751536167183613952",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post describes a planned event ('purge') with specific timing and uses hashtags associated with a political movement. The inclusion of a URL suggests it's intended to direct users to more information, but without independent verification of the event's existence or details, it remains unverified. It exhibits characteristics of a rumor, but lacks sufficient evidence to definitively classify it as false."
+  },
+  {
+   "eid": "760120409429643266",
+   "label": "unverified",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post describes 'after school satan clubs,' which is a recurring rumor/claim often shared on social media. While the existence of these clubs has been reported in some areas, the extent and nature of their activities are often disputed and difficult to verify definitively. Therefore, the claim falls into the 'unverified' category."
+  },
+  {
+   "eid": "761573188543229952",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references job growth and provides a URL, suggesting it's drawing from an official report or data source. The phrasing 'our businesses have added' implies a factual statement based on economic data, rather than speculation. The length of the job growth period (77 months) is a specific detail that lends credibility."
+  },
+  {
+   "eid": "763738618573623297",
+   "label": "unverified",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "Multiple fact-checks have debunked this claim. Bob Beckel did not call for Assange's assassination; the quote was fabricated and misrepresented. The URL likely leads to a site spreading disinformation."
+  },
+  {
+   "eid": "764497123530375169",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references a URL and describes an event (attack on a Swiss train) that was subsequently reported by multiple reliable news sources (e.g., Reuters, BBC). The details align with confirmed news reports, indicating it's an ordinary news report rather than a rumour."
+  },
+  {
+   "eid": "765739657908850688",
+   "label": "unverified",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This post misattributes a quote to Donald Trump. While he has made racially insensitive statements, the specific phrasing \"laziness is a trait in blacks\" is not something he has ever said. Fact-checking organizations have repeatedly debunked this claim, demonstrating it to be a fabricated quote."
+  },
+  {
+   "eid": "765779159176077312",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references Malaysian maritime officials, indicating an official statement. The presence of a URL suggests a link to a news report from a reliable source, which supports the claim of an oil tanker hijacking. This aligns with reports from reputable news outlets confirming the incident."
+  },
+  {
+   "eid": "766568413418356736",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post references 'us media' and provides a URL, indicating it's reporting on a news event rather than spreading a rumor. Multiple reputable news outlets reported on this agreement between Jimmy Feigen and Brazilian authorities, confirming the details presented. Therefore, it aligns with a standard news report."
+  },
+  {
+   "eid": "766752508312166402",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.85,
+    0.05,
+    0.05,
+    0.05
+   ],
+   "rationale": "Multiple reputable news sources (e.g., Reuters, New York Times) reported on a judge ordering Hillary Clinton to respond to questions from a conservative legal watchdog. The claim is verifiable through these sources, indicating it's a factual news report rather than a rumor. The presence of a URL, while not checked here, suggests an attempt at providing source material."
+  },
+  {
+   "eid": "767459987476054016",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "The post reports a factual outcome (Team USA winning a basketball gold medal) and includes a URL presumably linking to a news report. The claim aligns with official results and reporting from reputable sports news sources, indicating it's a standard news report rather than a rumor."
+  },
+  {
+   "eid": "767541796410839040",
+   "label": "non-rumor",
+   "pred": "false",
+   "probs": [
+    0.05,
+    0.9,
+    0.03,
+    0.02
+   ],
+   "rationale": "This post makes an extraordinary claim about former Federal Reserve Chair Jerome Powell and the Clintons. There is no credible reporting to support the assertion that the Clintons are attempting to 'pin' a scandal on Powell. It appears to be a fabricated accusation, characteristic of a false rumor."
+  },
+  {
+   "eid": "767709416879644672",
+   "label": "non-rumor",
+   "pred": "non-rumor",
+   "probs": [
+    0.95,
+    0.02,
+    0.02,
+    0.01
+   ],
+   "rationale": "This post presents a biographical fact (Dorothy Parker's birthdate) and a quote attributed to her. The URL likely leads to a reliable source confirming this information, making it an ordinary news report rather than a rumour. It's a straightforward commemoration of a historical figure."
+  },
+  {
+   "eid": "767859423150759936",
+   "label": "non-rumor",
+   "pred": "unverified",
+   "probs": [
+    0.1,
+    0.1,
+    0.1,
+    0.7
+   ],
+   "rationale": "The post references a 'study' but provides no specifics about its methodology, peer review status, or publication venue. Without further information about the study itself (e.g., where it was published, who conducted it), it's impossible to verify the claim that being 'dunked on' is linked to clinical depression; it remains unverified."
+  }
+ ]
+}

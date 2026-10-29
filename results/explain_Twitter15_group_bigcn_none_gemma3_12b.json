@@ -1,0 +1,2455 @@
+{
+ "args": {
+  "cmd": "explain",
+  "backend": "openai",
+  "base_url": "http://localhost:11434/v1",
+  "model": "gemma3:12b",
+  "max_tokens": 400,
+  "json_mode": false,
+  "n_replies": 10,
+  "limit": 200,
+  "run": "Twitter15_group_bigcn_none",
+  "alpha": 0.5
+ },
+ "gnn": {
+  "acc": 0.41,
+  "macro_f1": 0.3752874561714652,
+  "f1_per_class": {
+   "non-rumor": 0.5031446540880503,
+   "false": 0.4473684210526316,
+   "true": 0.11764705882352941,
+   "unverified": 0.4329896907216495
+  },
+  "pred_counts": {
+   "non-rumor": 109,
+   "false": 26,
+   "true": 18,
+   "unverified": 47
+  }
+ },
+ "llm_with_evidence": {
+  "acc": 0.495,
+  "macro_f1": 0.476051726051726,
+  "f1_per_class": {
+   "non-rumor": 0.5538461538461539,
+   "false": 0.5555555555555556,
+   "true": 0.2857142857142857,
+   "unverified": 0.509090909090909
+  },
+  "pred_counts": {
+   "non-rumor": 80,
+   "false": 40,
+   "true": 20,
+   "unverified": 60
+  }
+ },
+ "hybrid_alpha0.5": {
+  "acc": 0.445,
+  "macro_f1": 0.41429454917962905,
+  "f1_per_class": {
+   "non-rumor": 0.5165562913907285,
+   "false": 0.5185185185185185,
+   "true": 0.15151515151515152,
+   "unverified": 0.47058823529411764
+  },
+  "pred_counts": {
+   "non-rumor": 101,
+   "false": 31,
+   "true": 16,
+   "unverified": 52
+  }
+ },
+ "llm_self_reported_agreement": 0.735,
+ "llm_actual_agreement": 0.73,
+ "explanations": [
+  {
+   "eid": "273278761909239808",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "The claim of 42 million deaths during a Black Friday weekend is extraordinarily high and implausible, making it highly suspect. While the GNN initially assessed it as 'non-rumor' with a relatively high probability, the sheer magnitude of the claim, coupled with the lack of corroborating evidence from any credible news sources, strongly suggests it is false. The replies, including questioning the original poster's motives and making unrelated accusations, further indicate a lack of belief in the claim's veracity. The propagation pattern, with minimal replies and no further discussion, also suggests a lack of widespread acceptance.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "318263294098030593",
+   "label": "false",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim of black nurses saving the life of a KKK member is extraordinary and requires substantial verification, which is currently lacking. The GNN's assessment of 'unverified' aligns with this, as the probabilities are distributed across all categories without a clear consensus. The propagation evidence shows a cascade with limited depth and influence, suggesting a lack of widespread confirmation or refutation. The replies, while some express strong opinions, do not provide evidence to either confirm or deny the claim's veracity, further supporting the 'unverified' label.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "334722003057647616",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "The post references a sensational story about a man dying in Sweden due to a bizarre sexual encounter. While the GNN initially classified it as a non-rumor with high probability, the replies strongly suggest the story is a hoax or fabricated tale. Several repliers explicitly state the story is 'debunked,' 'not true,' and a 'classic strange sex tale,' and one even explains a supposed etymological trick used to make it seem plausible. The propagation evidence, while showing a cascade, doesn't inherently validate the claim itself; the replies are far more indicative of its falsity.",
+   "evidence_used": [
+    "claim",
+    "replies",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "336873759271157760",
+   "label": "true",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim that Hasan receives $278,000 while victims are denied Army benefits is highly suspect and likely false. The GNN's assessment aligns with this, assigning a high probability (0.62) to the 'false' label. The propagation evidence, specifically the cascade analysis highlighting replies as key drivers of the verdict, suggests the claim's spread was fueled by misinformation. Furthermore, replies express skepticism and propose alternative solutions (e.g., directing funds to victims), indicating a lack of verification and questioning of the initial assertion.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "348203818741272576",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "While the GNN initially classified this as 'non-rumor,' the claim itself \u2013 that the IRS sent substantial refunds to 'unauthorized aliens' at a single address \u2013 is highly improbable and lacks credible sourcing. The propagation evidence, while showing a cascade, doesn't indicate verification; the influential replies are largely expressions of outrage and speculation, not factual reporting. Furthermore, the replies questioning the claim's validity ('BS!! Find out who's address it is...') and suggesting it's fraudulent strongly suggest the post is fabricated. Therefore, the claim is likely false.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "356310469390245888",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim that the Obama administration filed federal charges against George Zimmerman is demonstrably false. Multiple reliable news sources at the time (and subsequently) confirmed that no such charges were filed. The GNN's assessment of 'false' with a 98% probability aligns with this established fact. The propagation evidence, showing a limited cascade with replies questioning the veracity of the claim, further supports this conclusion. The repliers' initial questioning ('if that's true', 'is that true') indicates a lack of belief in the claim's authenticity.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "356407105953071107",
+   "label": "false",
+   "gnn": "unverified",
+   "llm": "false",
+   "explanation": "The claim that Barack Obama and the Department of Justice filed federal charges against George Zimmerman is demonstrably false. The propagation evidence, particularly the lack of replies and the rapid questioning of the post's veracity within the cascade, suggests a lack of initial credibility. Crucially, the replies overwhelmingly deny the claim, with multiple users explicitly stating it's 'not true' and pointing out its absence from reliable news sources. Given the lack of any supporting evidence and the immediate pushback, the post is classified as false.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "366025766183514112",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that the Japanese government stated Fukushima was leaking 300 tons of radioactive water daily is likely accurate, aligning with the GNN's assessment. The post references a government statement, which lends credibility. The propagation pattern, with multiple direct replies reinforcing the initial claim, suggests it wasn't being disputed within the cascade. While some replies express emotional reactions (anger, sadness) and humorous comparisons (Godzilla), they don't challenge the core factual assertion, but rather react to it.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "366205297557110784",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "I agree with the GNN's assessment of 'non-rumor'. The claim, while concerning, aligns with reports from credible news sources regarding the Fukushima situation. The propagation evidence, specifically the GNN's high confidence score (0.90) and the lack of significant dissenting voices within the cascade, supports this. While some replies express concern and frustration, they don't contradict the core claim of water leakage, and one even links to a Russian news source (RT), which, while potentially biased, doesn't automatically invalidate the information itself.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "370855596050108416",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that radioactive groundwater is seeping towards the Pacific Ocean from Fukushima is a recurring and documented issue, supported by multiple credible news sources (as indicated by the linked URL). The GNN's assessment of 'non-rumor' aligns with this, given the presence of a verifiable source and the relatively low probabilities assigned to 'false' and 'unverified'. While some replies express skepticism or accusations (e.g., suggesting deliberate dumping), these do not negate the underlying factual basis of the report. The propagation pattern, with replies primarily retweeting and sharing the original article, further reinforces its status as a news report rather than a rumor.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "380055172896272384",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "While the GNN initially classified the post as 'non-rumor' with high probability, the claim itself \u2013 that a Louisiana city made twerking illegal with a 30-day jail sentence \u2013 is demonstrably false. Multiple fact-checks have debunked this, revealing it originated from a misinterpretation of a local ordinance regarding public indecency. The propagation evidence, while showing a wide spread, doesn't inherently validate the claim; it simply indicates its reach. The replies, including expressions of disbelief and comparisons to 'Footloose,' further suggest a lack of widespread acceptance of the claim's veracity.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "387021726007042051",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim that Obama 'won't stand for missing children' is a false and manipulative comparison to Cruz's actions. It implies a lack of concern on Obama's part, which is not supported by any evidence and is likely a distortion of his policies and actions regarding child welfare. The GNN's assessment of 'false' aligns with this, given the post's inflammatory nature and lack of factual basis. The replies, including those directly questioning the logic and accusing the original poster of changing the topic, further reinforce the falsity of the claim.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "407169699559247872",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that celebrities, friends, and co-stars reacted to Paul Walker's death is demonstrably true; his death was a widely reported news event. The GNN's assessment aligns with this, assigning a high probability (0.95) to 'non-rumor.' The propagation evidence shows the post spread through direct replies and retweets, indicating its acceptance as factual information. Furthermore, the replies express sadness and condolences, reinforcing the reality of the event rather than questioning its validity.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "407191058108256257",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "true",
+   "explanation": "While the GNN assigns a high probability to 'non-rumor,' the claim itself \u2013 Paul Walker's death \u2013 is a factual event that has been widely and consistently reported by credible news sources. The propagation evidence, showing a small cascade with direct replies expressing grief, is consistent with an initial reaction to a confirmed news event. The replies, such as 'I crying' and 'it's such a shame,' further support the veracity of the claim, indicating acceptance of the news. Therefore, despite the GNN's assessment, the claim is demonstrably true.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "407193347279699968",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that Paul Walker was reportedly 'so happy' hours before his death is consistent with news reports following his passing, making it a factual account rather than a rumour. The GNN's assessment of 'non-rumor' with a high probability (0.95) aligns with this, and the propagation evidence shows the post was shared with direct replies, indicating its acceptance as a news report. The replies largely express sadness and remembrance, further supporting the post's veracity and confirming it wasn't perceived as false or speculative.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "407205235682050048",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that a driver died with Paul Walker is factual; Roger Rodas was the driver and co-star who perished in the 2013 car accident. The GNN's assessment of 'non-rumor' aligns with this established fact, supported by numerous reliable news reports at the time. The propagation evidence, showing a cascade of posts, suggests the information was being shared as a known event rather than a speculative rumor. While the sentiment expressed (that the driver's death receives less attention) is subjective, the core claim itself is verifiable and not a fabrication.",
+   "evidence_used": [
+    "claim",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "407218583135997953",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "true",
+   "explanation": "The claim states that Roger Rodas died with Paul Walker, which is a factual statement confirmed by numerous reliable news reports following the 2013 car crash. While the GNN assigned a high probability to 'non-rumor,' the initial post's phrasing ('he's human too') suggests a reaction to a lack of recognition of Rodas's death, indicating it originated from a genuine news event rather than a fabricated story. The propagation pattern, with multiple retweets and replies, reinforces the spread of a known fact, not a rumour. Therefore, the claim is demonstrably true.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "407267881131732992",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim states that a trailer for the film 'Hours,' featuring Paul Walker, is available and the movie will release in two weeks. This is a factual statement that can be verified through news reports and film release schedules. The GNN's assessment of 'non-rumor' with a high probability (0.94) aligns with this, and the propagation pattern shows simple sharing of the link rather than questioning or denial. The replies largely express sadness and anticipation, further supporting the claim's veracity.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "427652211414274048",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, while potentially sensitive, is likely a report of a factual event. The GNN's high probability (0.86) for 'non-rumor' aligns with this assessment, and the lack of significant questioning or denial within the cascade (as indicated by the replies drawing zero further replies) further supports this. The propagation pattern, consisting primarily of direct replies, suggests dissemination of an established news item rather than the spread of speculation. Therefore, I concur with the GNN's verdict.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "427725166127226881",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that Eric Lawson, the former 'Marlboro Man,' died of a smoking-related disease is supported by multiple reliable news sources, making it an ordinary news report. The GNN's assessment of 'non-rumor' with a high probability (0.86) aligns with this, and the propagation evidence shows a straightforward dissemination of the information. While some replies contain tangential or irrelevant comments, they do not contradict the core claim; instead, they reflect reactions to the news itself. Therefore, I agree with the GNN's verdict.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "427762638274437120",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that the actor who played the Marlboro Man died from smoking-related causes is supported by the provided URL, which points to an NBC News report. The propagation evidence, showing a cascade of retweets and replies, suggests the information was shared as a news report rather than a rumor. While some replies express shock and irony, others acknowledge the age of the actor and confirm the reported age, indicating acceptance of the news. Given the presence of a credible news source and the lack of significant contradictory evidence, the 'non-rumor' classification is appropriate.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "428366153149194240",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim that the Affordable Care Act (Obamacare) will mandate RFID chip implants is demonstrably false and a recurring conspiracy theory. The GNN's assessment aligns with this, assigning a high probability (0.91) to the 'false' label. The propagation evidence, showing a cascade of replies with no further engagement after initial assertions, suggests the claim was spread without factual basis or challenge within the initial spread. Given the nature of the claim \u2013 a fabricated requirement \u2013 there's no credible source supporting it, and the lack of replies questioning the claim further reinforces its falsity.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "436157398269849602",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "The claim that a Hot Pockets recall involves meat from a facility the FDA says processed 'diseased and unsound animals' is demonstrably false. While the post references the FDA, it misrepresents and fabricates a connection to a recall. The propagation evidence, showing a cascade of replies largely sharing the same fabricated claim, suggests rapid spread of misinformation. Several replies express disbelief and even retraction, further indicating the claim's lack of veracity. The GNN's assessment of 'non-rumor' is incorrect given the fabricated nature of the claim.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "489802446001434625",
+   "label": "false",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The post's claim \u2013 'latest so far on shot down Malaysia Airlines plane #mh17' \u2013 is inherently open-ended and doesn't make a specific, verifiable assertion. The GNN's assessment of 'unverified' aligns with this, as the post simply points to further information without stating a concrete fact. The limited cascade and lack of further replies beyond the initial link suggest a low level of engagement and a lack of strong confirmation or denial. Crucially, one reply explicitly cautions against speculation, further reinforcing the uncertainty surrounding the post's content.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "489820657291911168",
+   "label": "false",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The post claims to share reported photographs from the MH17 crash, and the GNN correctly identifies it as unverified due to the lack of definitive confirmation. The propagation pattern shows a limited cascade with replies primarily focused on sharing the link and expressing shock or concern, rather than providing independent verification. Several replies question the content or appropriateness of the photographs, suggesting a lack of trust or certainty regarding their authenticity, further supporting the 'unverified' classification. While the link points to a news source (CBS News), the claim itself \u2013 'reported photographs' \u2013 requires independent verification of the images' provenance and accuracy.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "489833932813516800",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, stating Ukraine attributed the shooting down of Malaysia Airlines flight MH17 to a surface-to-air missile, aligns with established news reports and investigations into the event. The GNN's assessment of 'non-rumor' is supported by the propagation evidence, which shows a relatively contained cascade with replies largely focused on discussing the event and related claims. While some replies express doubts or offer alternative explanations, the core claim itself is consistent with documented information, justifying the 'non-rumor' label. The GNN's confidence score is also reasonable given the context.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "489865454312099840",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "unverified",
+   "explanation": "The claim of authorities collecting passports at the MH17 crash site with a visible Australian coat of arms is highly questionable and lacks definitive verification. While the GNN leans towards 'non-rumor,' the replies immediately cast doubt on the claim, suggesting it's not authorities and questioning the circumstances of the passports' condition. The presence of replies questioning the authenticity and purpose of the passport collection, alongside the comparison to 9/11, indicates a lack of consensus and a high probability of misinformation. Therefore, the claim remains unverified.",
+   "evidence_used": [
+    "claim",
+    "replies",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "489974591985840128",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim attributes a statement to Ukrainian officials regarding the cause of the MH17 downing, and the post includes URLs. The GNN's high confidence (0.97) in classifying this as a non-rumor aligns with the presence of URLs, suggesting a reference to a news report. While some replies express skepticism or offer alternative explanations, the initial claim is presented as a direct report from officials, and the cascade's structure indicates dissemination of information rather than speculation. The inclusion of a Wall Street Journal link further supports the assessment of this as a news report.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "490080544949276672",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that Ukraine officials stated MH17 was shot down by a Buk missile system, while initially controversial, was later substantiated by investigations and reports from multiple credible sources. The GNN's assessment of 'non-rumor' with a high probability (0.88) aligns with this, and the propagation evidence shows the initial claim was linked to a Wall Street Journal article, suggesting a basis in reporting. While some replies express skepticism or offer alternative theories, the core claim itself has been confirmed through independent analysis and reporting, making it an ordinary news report rather than a rumour.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "499366666300846081",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim alleges a police blockade of Ferguson, preventing entry and barring media, which is difficult to definitively confirm or deny without independent verification. The GNN's assessment of 'unverified' aligns with this uncertainty, given the low probabilities assigned to all other categories. The propagation evidence, consisting solely of direct replies with no further cascading, suggests limited initial validation or refutation. Furthermore, the replies themselves introduce speculative and inflammatory elements (e.g., FAA no-fly zone, comparisons to Gaza/Iraq, and violent rhetoric) that undermine the reliability of the original post.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "500258409988763649",
+   "label": "unverified",
+   "gnn": "true",
+   "llm": "non-rumor",
+   "explanation": "The claim states a specific event \u2013 the release of a Ferguson police officer's name by 9 ET \u2013 attributed to the police chief and sourced to J.B. Forbes and the AP. The presence of credible sources (Forbes and AP) strongly suggests this is a factual report, not a rumor. While the GNN's probabilities are close, the inclusion of AP as a source elevates the likelihood of accuracy. The replies, while often critical of the police department, do not contradict the core claim about the name release, but rather express opinions about the timing and implications, further supporting the 'non-rumor' classification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "500278294055768064",
+   "label": "true",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim that Darren Wilson was the officer involved in the Michael Brown shooting, and that he had no disciplinary record, was initially reported but later disputed and remains largely unverified with certainty. The GNN's assessment of 'unverified' aligns with this, given the low probabilities assigned to 'true' and 'false'. The cascade analysis shows a significant portion of the spread involved replies questioning the information or referencing prior coverage, suggesting a lack of widespread acceptance as fact. The replies themselves demonstrate skepticism and a lack of consensus, further supporting the 'unverified' label.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "500279189405433858",
+   "label": "unverified",
+   "gnn": "true",
+   "llm": "unverified",
+   "explanation": "The claim alleges the police chief deliberately framed Michael Brown as a robbery suspect to justify his killing. While the GNN assigns a high probability (0.76) to 'true', the evidence is insufficient to confirm this. The replies reveal significant questioning and skepticism regarding the narrative, including concerns about inconsistencies and motivations, which suggests a lack of widespread acceptance of the claim. The claim itself is difficult to verify definitively without access to internal police communications and decision-making processes, making it currently unverified.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "500280838710247424",
+   "label": "unverified",
+   "gnn": "true",
+   "llm": "true",
+   "explanation": "The claim that Mike Brown was a suspect in a strong-arm robbery, supported by police reports, has been confirmed by multiple credible sources and investigations following the Ferguson events. The GNN's high probability (0.92) for 'true' aligns with this established fact. The cascade analysis, showing a strong consensus within the propagation network, further reinforces this. While the replies themselves aren't explicitly documented here, the GNN's assessment is based on the overall network behavior, suggesting a general acceptance of the claim within the cascade.",
+   "evidence_used": [
+    "claim",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "500295393301647360",
+   "label": "unverified",
+   "gnn": "false",
+   "llm": "unverified",
+   "explanation": "The claim, that a manager at the Ferguson market stated police did not request surveillance video, is difficult to definitively assess. While the GNN flags it as 'false' with a relatively high probability, the information originates from a single, anecdotal source \u2013 a conversation with a manager. The propagation evidence, showing replies within the cascade, doesn't offer substantial corroboration or denial, suggesting a lack of widespread verification. Given the limited information and the potential for misinterpretation or inaccurate recall by the individual, classifying it as 'unverified' is more appropriate than 'false'.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "500308076004929537",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The post alleges a 'robbery' followed by the 'murder' of an 'unarmed black youth,' implying a cover-up or deliberate downplaying of the event. Given the lack of verifiable details about the alleged robbery or the circumstances surrounding the death, and the highly charged language used, the claim remains unverified. The GNN's assessment of 'unverified' aligns with this, as the probabilities are relatively close across all categories, indicating uncertainty. The replies further highlight the speculative nature of the post, with users debating the racial implications and questioning the narrative.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "500381163866062848",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim alleges a specific incident involving Ferguson police from 2009, which is difficult to independently verify given the time elapsed and the lack of readily available corroborating sources. The GNN's assessment of 'unverified' aligns with this difficulty, as the probabilities are spread across all categories but heavily favor 'unverified'. The replies demonstrate uncertainty and a questioning tone, with some users initially believing the claim to be sarcastic, further supporting the lack of definitive confirmation. While some replies express belief in the claim, this does not constitute verification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "501760566160289794",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The GNN's assessment of 'non-rumor' is reasonable given the available information. The claim of 78 arrests, while potentially contentious, is presented as a report from authorities, which aligns with the definition of a non-rumor. The propagation evidence, showing a cascade of posts with replies largely focused on commentary rather than direct contradiction, supports this. While some replies express skepticism about the authorities or question the number, the core claim isn't directly refuted, and the GNN's high confidence score (0.98) is justifiable.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "501774615837163521",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "unverified",
+   "explanation": "While the post claims a discrepancy between reported and actual overnight arrests in Ferguson, the GNN's 'non-rumor' classification is premature. The claim's veracity hinges on the accuracy of the 'list' and its comparison to official reports, which isn't independently verifiable from the post itself. The replies, including requests for injury stats and accusations of police misconduct, suggest a degree of skepticism and a search for further information, rather than confirmation of the initial claim. Therefore, the claim remains unverified pending corroboration from reliable sources.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "501785003144273921",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim states that arrest records show Ferguson police jailed twice as many people as initially reported, citing NBC as the source. Given that the post references a reputable news organization (NBC) and the GNN's assessment aligns with 'non-rumor' with a relatively high probability (0.54), it's reasonable to classify this as a factual report. While some replies express skepticism and introduce unrelated claims (e.g., the officer's injury), the core assertion about arrest records is supported by the NBC reference. The propagation evidence, focusing on direct replies, suggests a discussion rather than widespread disbelief, further reinforcing the 'non-rumor' classification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "501934077612941312",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The post cites a Washington Post report, indicating it originates from a reliable news source, which strongly supports a 'non-rumor' classification. The GNN's assessment aligns with this, assigning a high probability (0.63) to the 'non-rumor' label. While the replies contain politically charged commentary and speculation, they do not contradict the core claim about the British examination of the video; instead, they react to it. The propagation evidence, showing direct replies with minimal further engagement, suggests the initial claim was treated as factual rather than a rumor.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "503609826128044032",
+   "label": "unverified",
+   "gnn": "true",
+   "llm": "true",
+   "explanation": "The claim that Abdel-Majed Abdel Bary was a suspect in the beheading of James Foley was initially reported by credible news sources and later confirmed. While the GNN's probabilities are relatively close, the fact that the suspect's identity was widely reported and subsequently confirmed strengthens the 'true' assessment. The propagation evidence, showing a cascade of 94 posts and replies, suggests initial dissemination and discussion. The replies, while containing some inflammatory and irrelevant content, do not fundamentally challenge the core claim itself, but rather express opinions and ask clarifying questions about the suspect\u2019s background.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "504106473467944960",
+   "label": "true",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim alleges an audio tape played on CNN corroborates witness accounts of Darren Wilson continuing to shoot Michael Brown after a surrender attempt. While a CNN segment is linked in the replies, the specific claim about the audio tape's content and its corroboration of witness accounts remains unverified. The propagation evidence, with a GNN verdict of 'unverified' and high probability (0.93), aligns with this assessment. The replies themselves demonstrate questioning ('Link?'), agreement ('I concur completely'), and even contradiction ('how's this even make sense...'), further indicating a lack of definitive confirmation.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "504109775358287872",
+   "label": "true",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim alleges the existence of 'new shooting audio' related to Michael Brown, a highly sensitive and previously investigated event. The GNN's assessment of 'unverified' aligns with the lack of definitive confirmation and the significant uncertainty surrounding the audio's authenticity. The propagation pattern, with a high probability assigned to 'unverified' by the GNN, suggests a lack of consensus and widespread questioning within the cascade. Furthermore, replies expressing skepticism, demanding evidence, and questioning the audio's validity support the 'unverified' classification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "504267796424163328",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The post's claim centers on new audio potentially impacting the Michael Brown investigation, referencing an attorney's statement. The GNN's assessment of 'non-rumor' aligns with this, as it suggests a report based on a specific source (the attorney) rather than a fabricated story. The propagation evidence, showing a cascade of replies, indicates discussion around the topic rather than outright dismissal. While some replies express strong opinions and accusations, they primarily react to the core claim about the audio, not refute its existence or origin, further supporting the 'non-rumor' classification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "504304227246538752",
+   "label": "true",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim that audio may have captured the Michael Brown shooting is inherently difficult to verify without independent confirmation and access to the alleged audio. The GNN's assessment of 'unverified' aligns with this, given the low probabilities assigned to 'true' and 'false'. The propagation pattern, with replies showing little further engagement, suggests limited initial confidence or widespread belief in the claim. Furthermore, the replies themselves demonstrate skepticism and questioning, including a link to a completely unrelated article, indicating a lack of consensus or reliable corroboration.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "505611045897924608",
+   "label": "false",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim of a 15-year-old being convicted of domestic terrorism and sentenced to 25 years to life is highly unusual and warrants skepticism. The GNN's assessment of 'unverified' aligns with this caution, given the low probabilities assigned to 'true' and 'non-rumor.' The propagation evidence shows a cascade with minimal further discussion, suggesting limited initial validation. Crucially, replies directly question the veracity of the claim, citing links to older, different cases and expressing disbelief, indicating a lack of widespread acceptance of the initial assertion.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "509077805296914432",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim of a Muslim being arrested in Texas with an ISIS flag on body armor is highly suspect and likely false. The GNN's assessment aligns with this, assigning a high probability to 'false.' The propagation pattern, with replies amplifying the initial claim, suggests rapid dissemination of misinformation. Crucially, several replies directly challenge the claim, pointing out inaccuracies regarding the flag and questioning the veracity of the incident, indicating a lack of credible evidence supporting the original post.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "509114008587100160",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim that Durex is not making pumpkin spice condoms is demonstrably false, as confirmed by multiple sources and widely reported as a hoax. The GNN's assessment of 'false' with a 0.99 probability aligns with this reality, and the propagation evidence shows a cascade of users sharing the denial. The replies further reinforce this, with many expressing disappointment but ultimately accepting the news as untrue, and one even sarcastically questioning the legitimacy of a pre-sale. Given the widespread reporting and lack of evidence to the contrary, the claim is definitively false.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "509463916586762241",
+   "label": "true",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim that Microsoft was near a deal to buy Mojang, the maker of Minecraft, was ultimately false. The GNN's assessment aligns with this, assigning a high probability (0.84) to the 'false' label. Propagation evidence shows the post spread through direct replies, many of which expressed disbelief or humor, indicating a lack of credibility. The replies themselves frequently questioned the claim and reacted with skepticism, further supporting the 'false' verdict.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "509463933564891137",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "I agree with the GNN's assessment of 'non-rumor'. The post cites a report from the Wall Street Journal, a reputable news source, which lends significant credibility to the claim of a potential Microsoft-Mojang deal. The propagation evidence, showing a cascade of posts with replies, suggests the information was shared as a news report rather than a speculative rumor. While the GNN's probability for 'non-rumor' is slightly lower than mine, the presence of a credible source outweighs the uncertainty. The lack of significant questioning or denial in the replies further supports this classification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "509464457836511232",
+   "label": "true",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim of Microsoft acquiring Mojang for $2 billion is a significant business transaction, and while it gained traction online, it remained unconfirmed at the time of the post's initial spread. The GNN's assessment of 'unverified' aligns with this, as the probabilities reflect a lack of strong evidence either way. The propagation evidence shows a moderate cascade with replies indicating surprise and concern, but no definitive confirmation. The replies themselves express disbelief and worry, further suggesting the claim was a rumor rather than established news.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "510916725953417218",
+   "label": "true",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim, an ISIS video purportedly showing a beheading, is inherently difficult to verify rapidly and definitively. The GNN's assessment of 'unverified' aligns with this, given the probabilities. The propagation pattern, with multiple direct replies simply repeating the claim without independent verification, suggests a rapid spread of an unconfirmed report. Furthermore, replies questioning the authenticity of the photo and calls for extreme action indicate a lack of certainty and potential for misinformation, reinforcing the 'unverified' label.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "513749585391390720",
+   "label": "true",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim that Starbucks is testing a Guinness-flavored latte is highly improbable and lacks credible sourcing. The GNN's assessment of 'false' aligns with this, given the relatively low probability assigned to 'non-rumor' and a significant probability for 'false'. The replies, including expressions of disbelief ('hahaha what?') and comparisons to other unusual flavor combinations (vodka), further suggest the claim is fabricated. The repeated sharing of the Buzzfeed link, while indicating propagation, doesn't validate the information itself; Buzzfeed is often a source of clickbait and not reliable for such specific product testing announcements.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "514062859987595264",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "While the claim itself is extraordinary, the GNN's assessment of 'non-rumor' is reasonable given the provided evidence. The presence of a URL (dailym.ai/1paDRZS) suggests a source, and the cascade analysis indicates a degree of propagation consistent with a news report, even if sensational. The replies, while often incredulous and questioning, don't definitively label the claim as false; instead, they express disbelief and seek confirmation, which is typical of reactions to unusual news. The GNN's probabilities also reflect this uncertainty, with a relatively close split between 'true' and 'false'.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "514142113601437696",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that Alaskan reporter Charlo Green quit her job live on air is a verifiable news event. The GNN's assessment of 'non-rumor' with a high probability (0.86) aligns with this, and the propagation evidence shows a relatively straightforward spread without significant questioning or denial. The replies, while containing some tangential political commentary and opinions on the stunt, largely acknowledge the event itself, with one even praising the director and mentioning a lecture with Sarah Palin, suggesting it's a known occurrence. Therefore, I agree with the GNN's verdict.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "514148279601606656",
+   "label": "true",
+   "gnn": "true",
+   "llm": "true",
+   "explanation": "The claim that Starbucks is experimenting with a beer-flavored latte resembling Guinness is supported by the GNN's assessment and the provided evidence. The propagation pattern, with a significant probability assigned to 'true' by the GNN and the presence of a link to a Mashable article, suggests the claim originated from a credible source. Furthermore, the replies, while containing some negative reactions, also include expressions of intrigue and excitement, and several directly retweet and share the original post with the link, indicating a belief in the claim's veracity. Therefore, I agree with the GNN's verdict.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "514508854990999553",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, while humorous, refers to a real phenomenon known as 'Bendgate,' where reports emerged of iPhone 6 Plus devices bending when subjected to pressure in pants pockets. The GNN's assessment of 'non-rumor' aligns with this, as the issue was documented and reported by multiple news outlets (as evidenced by the linked article). The propagation pattern, with replies largely referencing the article and adding humorous commentary, further supports the claim's basis in reality rather than pure fabrication. While the initial phrasing is satirical, it points to a verifiable issue.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "514517470238240768",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "The claim that someone can bend an iPhone 6 Plus with bare hands is highly improbable and demonstrably false. While the GNN assigned a relatively high probability to 'non-rumor' (0.62), the propagation evidence and replies strongly suggest a fabricated or exaggerated scenario. The replies, including jokes about bending it back and comments about choosing smaller phones, indicate skepticism and disbelief, undermining the claim's credibility. The provided URL likely leads to a staged demonstration or a misleading video, not a genuine event.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "514550436377137152",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim that iPhone 6 Plus owners were complaining about phones bending, while initially gaining traction, was ultimately determined to be largely exaggerated and not representative of a widespread issue. The GNN's assessment of 'false' aligns with this understanding, supported by the relatively low probability assigned to 'true' and 'non-rumor'. The propagation evidence, showing a cascade of replies, indicates initial spread but lacks substantial verification. Furthermore, the replies themselves, including humorous and dismissive comments like 'butt drape' and suggestions of using pagers or holsters, suggest a lack of serious concern and a degree of skepticism towards the initial claim.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "516394449065496577",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim that Hong Kong protesters were directly adopting the 'hands up, don't shoot' gesture from Ferguson is difficult to definitively confirm or deny based on the available information. While the Vox article cited in the original post attempts to draw a connection, several replies directly question this assertion, suggesting it's misleading or clickbait. The propagation pattern, with replies debating the claim's validity, further reinforces the lack of conclusive evidence. Given the conflicting viewpoints and absence of verifiable confirmation, the 'unverified' label aligns with the GNN's assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "516425769560866817",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim that Hong Kong protesters were using the 'Hands Up Don't Shoot' symbol, directly referencing the Ferguson movement, is difficult to definitively verify. While the post itself references Getty Images, which suggests a potential source, the replies introduce conflicting information, with some claiming it's a protest tool and others suggesting Hong Kongers were unaware of Ferguson. The propagation pattern, as indicated by the GNN, shows a lack of strong confirmation within the initial cascade, further supporting the 'unverified' label. Given the conflicting narratives and lack of conclusive evidence, the GNN's assessment aligns with a cautious interpretation.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "516636338679197697",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim that KFC is being 'banned' due to offending Muslims and the questioning of halal KFCs is demonstrably false. The GNN's assessment aligns with this, assigning a high probability (0.79) to the 'false' label. The propagation evidence, showing a cascade of replies without significant further engagement after initial reactions, suggests the claim lacked widespread support or verification. The lack of replies to the influential cascade nodes further reinforces the absence of corroborating evidence, indicating the post's claim was likely dismissed or questioned by repliers.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "517003426832453633",
+   "label": "true",
+   "gnn": "true",
+   "llm": "true",
+   "explanation": "The claim that Colleen Hufford was beheaded is supported by reporting from the New York Post (as linked in the original post), which is a generally reliable news source. The GNN's high probability of 'true' (0.82) aligns with this assessment, and the propagation evidence shows a cascade focused on remembering the victim. While some replies contain politically charged commentary and speculation, the core claim of the beheading itself is verifiable through external reporting, making it a tragic but factual event. The replies, while often emotionally charged and politically biased, do not contradict the core claim.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "517034091028676608",
+   "label": "unverified",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim that iOS 8 resets delete iCloud data is demonstrably false, and the GNN correctly identifies it as such. The propagation evidence shows a relatively limited cascade with no significant amplification, suggesting a lack of credibility. Furthermore, the replies reveal skepticism and humorous dismissal of the claim, with some users even suggesting it's a 'feature' or expressing relief they haven't updated. The presence of a link to a questionable source ('lifehac.kr') further reinforces the assessment that this is a fabricated rumor.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "517053056211357696",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "true",
+   "explanation": "While the GNN classified this as 'non-rumor' with high probability, the claim itself \u2013 that a patient in Dallas tested positive for Ebola \u2013 was a verifiable news event that subsequently proved to be true. The propagation evidence, showing a cascade of tweets and replies, suggests initial shock and concern, but ultimately reflects the spread of a factual report. Several replies confirm the origin of the patient's travel from West Africa, aligning with later confirmed details, and demonstrating that the initial claim was not a fabrication. Therefore, I reclassify this as 'true' despite the GNN's assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "517416417164263424",
+   "label": "true",
+   "gnn": "unverified",
+   "llm": "non-rumor",
+   "explanation": "The claim that Alton Nolen, the Oklahoma beheading suspect, was ordered held without bond is a straightforward factual statement about a legal proceeding. While the GNN flagged it as 'unverified,' the phrasing suggests a standard news report, and the lack of significant questioning or contradictory information in the replies supports this. The replies primarily express opinions about the suspect and the justice system, rather than challenging the core claim itself. Therefore, it's more likely a report of a factual event than a rumour.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "518665533089406976",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim of a mass grave discovery linked to missing student protesters, while referencing a real and tragic event (Ayotzinapa), appears to be false based on the GNN's analysis and the subsequent propagation patterns. The GNN assigns a higher probability to 'false' than 'true' or 'unverified,' which aligns with the observed cascade behavior where influential replies primarily spread the initial claim without significant challenge or corroboration. The replies themselves, while expressing solidarity and outrage, largely repeat the initial claim and link to a potentially unreliable source (RT.com), rather than providing independent verification. The presence of emotionally charged and politically-motivated replies further suggests the information may be sensationalized or inaccurate.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "520265722967375872",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim that Kim Jong Un may have an injured leg, while attributed to a source, remains unverified. The GNN's assessment of 'unverified' with a high probability (0.83) aligns with this, as the provided URL likely contains a report that doesn't definitively confirm the injury's severity or cause. The replies demonstrate a range of reactions, from dismissive jokes to speculation about his health and even malicious wishes, indicating a lack of consensus and further complicating verification. Given the limited information and the speculative nature of the initial report, classifying it as 'unverified' is the most appropriate judgment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "521496155310796800",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim that Kristen Stewart 'trashes our military' and 'defends 9/11 terrorists' is highly inflammatory and lacks credible evidence. The GNN's assessment of 'false' aligns with this, given the low probability assigned to 'true' and the relatively high probability of 'false'. The propagation evidence, showing a cascade of replies, suggests the post spread as a rumour rather than a verified news report. Furthermore, several replies directly question the claim, suggest it's taken out of context, and even express ignorance about Kristen Stewart, indicating a lack of widespread belief in its veracity.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "521663202183348224",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim that Ebola was found in hair extensions is demonstrably false and has been widely debunked. The GNN's assessment aligns with this, assigning a high probability (0.84) to the 'false' label. The propagation evidence, showing a cascade of identical posts with no further replies from influential nodes, suggests a rapid spread of misinformation rather than genuine discussion or verification. The replies, largely repetitions of the original claim, indicate a lack of critical evaluation and further support the 'false' verdict.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "521717368264093696",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "unverified",
+   "explanation": "The post's claim, linking Kristen Stewart to 'reality' and a 'demented right-wing fantasy,' is vague and relies on external URLs. While the GNN initially classified it as 'non-rumor,' the replies reveal significant confusion and disagreement regarding the post's meaning. Many users interpret the post as accusing Kristen Stewart of something, while others clarify she's discussing a character, suggesting a misinterpretation or deliberate distortion. The repeated sharing of the URLs without context further muddies the waters, preventing a definitive assessment of the claim's truthfulness.",
+   "evidence_used": [
+    "claim",
+    "replies",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "522692223952228353",
+   "label": "unverified",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim, that a passenger at a Washington airport wasn't taking risks, quickly morphed into a rumour about Ebola due to the replies and associated link. The GNN's assessment of 'false' aligns with this observation, as the initial claim is vague and easily misinterpreted, and the propagation evidence shows a rapid shift towards an Ebola-related narrative. The replies demonstrate questioning and speculation, ultimately associating the passenger's actions with a serious disease, which is not supported by any reliable information. The link provided in the original post and subsequent replies likely contributed to the spread of misinformation.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "523026678419714048",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "unverified",
+   "explanation": "While the GNN classifies this as a non-rumor with high probability, the claim itself \u2013 a man encountering a spider the size of a small puppy in a rainforest \u2013 is extraordinary and lacks corroborating evidence from reliable news sources. The propagation pattern, consisting primarily of reactions and humorous replies rather than verification attempts, suggests it's being treated as sensational rather than factual. The replies demonstrate disbelief and humorous exaggeration, further undermining the claim's credibility. Therefore, the post remains unverified.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "523655026485366784",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim of a 'puppy-sized spider' surprising a scientist in a rainforest, while sensational, is likely a non-rumor given the GNN's high confidence (0.76) and the presence of a URL (though not provided). The propagation pattern, with multiple direct replies, suggests a discussion around a reported event rather than the spread of a fabricated story. While the replies express fear and disbelief, they don't inherently challenge the existence of the event itself, but rather react to its content. Therefore, I agree with the GNN's assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "524168442841010176",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The post explicitly states a rumor about Banksy's arrest is a hoax, and the GNN strongly agrees with this assessment, assigning a probability of 1.00 to 'false'. The propagation evidence, showing a cascade of replies, suggests the initial rumor was widespread enough to warrant a debunking post. The fact that the most influential parts of the cascade were direct replies, often with zero further replies, indicates these were likely responses directly addressing and refuting the false claim, rather than amplifying it. Therefore, the claim that Banksy was arrested was indeed false.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "524186749002473472",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim 'Banksy not arrested, cover not blown' was presented as breaking news and the GNN strongly indicates it is false with a 98% probability. The propagation evidence, showing a cascade of 67 posts and significant replies, suggests widespread dissemination of this false information. Furthermore, the replies themselves reveal immediate questioning and accusations of being a liar, indicating a lack of credibility and supporting the GNN's assessment. While some replies express confusion or skepticism, the overall sentiment leans towards disbelief and rejection of the initial claim.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "524289058290159616",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The post claims someone (implicitly Banksy) was 'not arrested, but busy,' referencing a new mural. The GNN's assessment of 'false' aligns with this, and the propagation evidence (cascade analysis) strongly supports this verdict. The replies, while largely positive about the artwork itself, do not corroborate the initial claim about avoiding arrest; instead, they focus on the mural's artistic merit and perceived meaning. The lack of any supporting evidence for the 'not arrested' portion of the claim, combined with the GNN's high confidence, leads to a 'false' classification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "524320261667950592",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "unverified",
+   "explanation": "The original post, \"i feel some type of way. URL\", is vague and doesn't make a concrete claim that can be verified. The URL points to an article on The National Report, a known satire website. While the GNN assigns a high probability to 'non-rumor' based on its analysis, the source's reputation for publishing fabricated stories necessitates a more cautious assessment. The replies, including one explicitly referencing a Banksy article from The National Report, further suggest the post is likely referencing a satirical piece, making it unverified rather than a straightforward news report.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "524685073979678721",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that the South American Goliath birdeater spider can be the size of a puppy, while sensational, is supported by reports from reliable sources (indicated by the URL provided and the GNN's high confidence). The propagation evidence shows a relatively stable cascade with replies largely focused on expressing reactions rather than questioning the core claim's veracity. While some replies are emotionally charged, they don't challenge the size comparison itself, and the repeated sharing of the original link reinforces its legitimacy. Therefore, I agree with the GNN's assessment that this is not a rumor.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "524699123971534848",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, referencing a 'giant goliath birdeater spider,' is likely a reference to a real spider and a news report about it. The GNN's assessment of 'non-rumor' aligns with this, and the propagation pattern shows the link being shared, suggesting it's linked to a factual report. While some replies express fear or disbelief, they don't contradict the existence of the spider itself; rather, they reflect emotional reactions. The presence of the URL further supports the claim's basis in a verifiable source.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "524930365400821761",
+   "label": "true",
+   "gnn": "true",
+   "llm": "true",
+   "explanation": "The claim of a shooting at a Canadian war memorial is assessed as true. The GNN's high probability (0.77) for 'true' aligns with subsequent confirmation from credible news sources (as indicated by the CNN link in a reply). While some replies initially questioned the location or expressed insensitive sentiments, the presence of a verifiable news link strongly supports the core claim. The cascade analysis, highlighting influential replies, further reinforces the spread of a factual event, not a fabricated one.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "524932056560963584",
+   "label": "unverified",
+   "gnn": "true",
+   "llm": "true",
+   "explanation": "The claim of shots fired in the Canadian Parliament was initially reported as breaking news and subsequently confirmed by multiple credible news sources. The GNN's high confidence (1.00 probability) in the 'true' label aligns with this verification. The limited cascade and lack of replies questioning the initial report further support the initial assessment, suggesting rapid and widespread acceptance of the information as factual. While the cascade was small, the initial reports were accurate and corroborated by official statements.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "524962676665888769",
+   "label": "true",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim, stating 'most of downtown #ottawa is in lockdown,' is difficult to definitively verify based on the provided information. The GNN's assessment of 'unverified' aligns with this uncertainty, given the low probabilities assigned to 'true' and 'false.' The propagation pattern, with several direct replies showing little further engagement, suggests limited initial validation or debunking. Furthermore, the replies themselves introduce unrelated content and speculative questions, indicating a lack of consensus and contributing to the overall ambiguity.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "524972443308683264",
+   "label": "unverified",
+   "gnn": "true",
+   "llm": "true",
+   "explanation": "The claim, a statement from an Ottawa hospital regarding three patients received, is likely true. The GNN's high probability (0.84) for 'true' aligns with this assessment, and the propagation evidence shows a cascade that doesn't indicate widespread questioning or denial. While some replies express confusion (e.g., regarding a timestamp), these are minor and don't invalidate the core claim of the hospital statement. The replies generally seem to accept the information as presented, with some expressing gratitude and others speculating on the context, further supporting the veracity of the initial report.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "524976106861236226",
+   "label": "true",
+   "gnn": "true",
+   "llm": "true",
+   "explanation": "The claim that a witness reported the shooter raising his arms in triumph, as initially reported by the Associated Press (linked in the post), aligns with subsequent verified accounts of the event. The GNN's high probability for 'true' (0.86) is supported by the cascade's propagation pattern, where several direct replies amplified the initial report. While some replies express outrage and speculation (e.g., accusations of terrorism or political motivations), they do not contradict the core claim about the shooter's actions, but rather reflect the emotional response to the event. Therefore, I agree with the GNN's assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "524993533212897281",
+   "label": "unverified",
+   "gnn": "true",
+   "llm": "non-rumor",
+   "explanation": "While the GNN assigns a high probability to 'true,' the claim itself \u2013 that the FBI is assisting in the Ottawa shooting case \u2013 is a factual report attributed to CTV News, a reliable Canadian news source. The propagation evidence, showing a cascade of replies, doesn't inherently validate truth; it merely indicates spread. The replies themselves, while containing opinions and questions about the involvement of the FBI, do not contradict the core claim. Therefore, classifying it as a 'non-rumor' is more accurate than 'true,' as it reflects a reported fact from a credible source.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "525009850104037376",
+   "label": "true",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim that Kevin Vickers 'took down' the attacker at Parliament Hill is unverified. While the GNN correctly identifies this as unverified with a high probability (0.56), the propagation evidence shows a limited cascade with replies largely expressing gratitude and admiration rather than questioning the claim itself. The replies, while supportive, lack concrete details or independent verification of Vickers' actions, leaning towards celebratory praise rather than factual reporting. Given the lack of corroborating evidence and the initial uncertainty surrounding the event, classifying this as unverified is the most appropriate assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "525024066152169473",
+   "label": "true",
+   "gnn": "unverified",
+   "llm": "true",
+   "explanation": "The claim that Corporal Nathan Cirillo was shot dead at the Ottawa war memorial is demonstrably true, confirmed by numerous reliable news sources at the time. While the GNN initially flagged it as 'unverified' with a relatively low probability of truth, the cascade analysis and replies strongly suggest widespread acceptance and mourning, indicating a shared understanding of a confirmed event. The replies, filled with expressions of grief, remembrance, and respect, further solidify the veracity of the claim, and the link to a website discussing the Royal Family's connection to the armed forces, while potentially tangential, doesn't negate the core factual assertion. Therefore, I disagree with the GNN's assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "525033697045925888",
+   "label": "true",
+   "gnn": "unverified",
+   "llm": "non-rumor",
+   "explanation": "While the GNN flags this as 'unverified,' the claim itself \u2013 reporting the timing of the first shots in the Ottawa shooting \u2013 is a factual detail that can be corroborated by numerous reliable news sources covering the event. The propagation evidence, showing a small cascade of direct replies with no significant questioning or denial, suggests a general acceptance of the information. The replies, while emotionally charged, do not contradict the core claim about the timing of the shooting. Therefore, I believe the post represents an ordinary news report and should be classified as a 'non-rumor.'",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "527131140721623040",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim of a 'poster girl' for Kobane being beheaded is extremely serious and would warrant immediate widespread reporting if true. However, the GNN's assessment of 'unverified' aligns with the lack of corroborating evidence from reliable news sources. The propagation pattern, with multiple replies having zero further replies, suggests a lack of confidence or further investigation within the initial spread. Given the gravity of the claim and the absence of verification, classifying it as 'unverified' is the most appropriate assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "531108688749404160",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim that Macaulay Culkin is dead, despite being refuted as a hoax, initially circulated as a rumour. The GNN's assessment of 'false' aligns with the fact that the initial claim was inaccurate, and subsequent reports confirmed his well-being. The propagation evidence, showing a cascade of posts and replies, indicates the rumour's spread. Furthermore, the replies, including expressions of relief and frustration with celebrity hoaxes, support the conclusion that the initial report was indeed false.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "531206167302012929",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, while hyperbolic, refers to a real product release: Doritos-flavored Mountain Dew, often bundled with Call of Duty. The GNN's assessment of 'non-rumor' is reasonable, given the existence of the product. The propagation evidence, focusing on direct replies, suggests a discussion around the announcement rather than a widespread belief in a false claim. While some replies express disbelief or disgust, others reference the product's association with Call of Duty and Gamestop, indicating awareness of its reality.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "531543620856197121",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim that al-Baghdadi was wounded in airstrikes, attributed to Iraqi officials, falls into the 'unverified' category. While the initial report originates from a potentially reliable source (Iraqi officials), the lack of independent confirmation and the GNN's assessment support this classification. The propagation pattern, with multiple direct replies showing little further engagement, suggests limited initial validation. Furthermore, the replies themselves are largely dismissive, sarcastic, or focused on unrelated commentary, indicating a lack of serious consideration of the claim's veracity.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "531606992788287489",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim, that Pentagon officials are skeptical of Iraqi claims regarding an injured ISIS leader, is inherently difficult to verify without official confirmation. The GNN's assessment of 'unverified' aligns with this, given the low probabilities assigned to 'true' and 'false'. The propagation pattern, with multiple direct replies showing little further engagement, suggests limited confidence or widespread belief in the claim. Furthermore, the replies themselves range from dismissive skepticism ('Believe everything you see and nothing you hear') to calls for action and even irrelevant comments, indicating a lack of consensus or strong validation.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "531607884220485632",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The post presents a photograph of Vladimir Putin's motorcade, attributed to a specific photographer (Marc Leibowitz) and linked to an image. This aligns with a standard news report format, rather than a speculative rumor. The GNN's assessment of 'non-rumor' is reasonable, supported by a probability of 0.51, and the cascade analysis doesn't reveal significant questioning or denial within the replies. The lack of replies to the influential direct replies suggests a general acceptance of the post's content as factual, further reinforcing the 'non-rumor' classification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "531676808836833280",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, while unusual (Doritos-flavored Mountain Dew), is likely a recipe or demonstration rather than a fabricated event. The GNN's assessment of 'non-rumor' with a high probability (0.85) is reasonable, and I concur. The propagation pattern, consisting primarily of direct replies with minimal further engagement, suggests a sharing of content rather than the spread of misinformation. The replies themselves, ranging from amusement to disgust, indicate reactions to a demonstration, not disbelief or denial of a false claim.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "532275347413544961",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that Big Bank Hank of the Sugarhill Gang died at 57 is supported by a link to a credible news source (HuffPost), which is shared in multiple replies. The GNN's assessment of 'non-rumor' aligns with this evidence, and the propagation pattern shows a relatively straightforward dissemination of the news. While some replies are tangential or express condolences, none directly contradict the core claim, reinforcing its validity. The cascade's structure, with replies primarily sharing the news link, further strengthens the assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "532276693931945984",
+   "label": "true",
+   "gnn": "unverified",
+   "llm": "true",
+   "explanation": "While the GNN initially flagged the post as unverified, subsequent confirmation from reliable news sources (linked in the original post) establishes that Big Bank Hank did indeed pass away. The propagation evidence, while showing a degree of initial uncertainty, doesn't contradict the core claim. The replies, despite some emotional reactions and tangential comments, largely acknowledge and mourn the reported death, suggesting a belief in the veracity of the information. Therefore, the claim is demonstrably true.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "532297096356167680",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "true",
+   "explanation": "While the GNN initially classified this as a non-rumor, the subsequent replies and the link provided strongly suggest the claim is true. Several replies explicitly confirm the news and mention cancer, aligning with reports from reliable news sources that later verified Big Bank Hank's passing. The propagation pattern, with replies echoing the initial claim and sharing links, indicates widespread acceptance of the information as factual. Therefore, I reclassify this as 'true' based on the corroborating evidence.",
+   "evidence_used": [
+    "claim",
+    "replies",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "532319110458118144",
+   "label": "false",
+   "gnn": "true",
+   "llm": "true",
+   "explanation": "The claim that a Chick-fil-A manager banned slang is supported by the provided URL, which links to a news report from MyFoxPhilly.com. The GNN's assessment of 'true' aligns with this evidence, and the propagation analysis shows a significant cascade suggesting widespread belief in the claim. While some replies question the news's validity or raise concerns about freedom of speech, the presence of a linked news article strengthens the likelihood that the core claim is accurate, even if the details are subject to interpretation or exaggeration.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "535474861616148480",
+   "label": "true",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim identifies the shooter as Myron May, a lawyer with a specific educational background. While the GNN assigns a low probability to this being a confirmed news report (non-rumor), the high probability of 'unverified' aligns with the initial chaotic nature of breaking news events where details are often preliminary and subject to change. The limited cascade and lack of further replies suggest the information hasn't been widely vetted or confirmed, and the single reply referencing 'Guns Up' indicates a speculative, potentially flippant reaction rather than verification. Given the lack of corroborating evidence and the post's initial spread, 'unverified' is the most appropriate label.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "535579674152148992",
+   "label": "true",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim that the shooter's last Facebook status was a Bible verse (Matthew 5:3) and a hypothetical comparison to a Quran status is difficult to verify definitively. While the GNN assigns a high probability to 'unverified' (0.64), reflecting the lack of readily available, reliable confirmation, the replies demonstrate significant skepticism and questioning of the claim's accuracy and context. The replies questioning the connection between the verse and the shooting, and the bizarre comparison to a Quran status, suggest the post is likely sensationalized or misattributed, but without independent verification, it cannot be definitively labeled as false. Therefore, I agree with the GNN's assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "536804445678755840",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, that a Lego letter from the 1970s still holds a relevant message for parents, is likely factual and not a rumour. The GNN's assessment of 'non-rumor' with a high probability (0.74) aligns with this, and the propagation evidence shows a relatively contained and supportive cascade. The replies largely express agreement and positive sentiment, with some referencing related observations (e.g., gender-neutral toys), further suggesting the post reflects a genuine article and message rather than fabricated information. The presence of retweets and mentions reinforces the idea that the post is sharing an existing piece of content.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "536962520477470720",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that a powerful letter from Lego to parents in the 1970s exists is likely true, and the GNN's assessment of 'non-rumor' aligns with this. The post includes a URL, suggesting a verifiable source, and the replies largely confirm the letter's existence and impact, with several users expressing nostalgia and agreement. While some replies introduce tangential political commentary, they don't contradict the core claim about the letter itself. The propagation evidence, showing a cascade of replies and shares, further supports the claim's circulation as a factual piece of information.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "537976883150077952",
+   "label": "unverified",
+   "gnn": "true",
+   "llm": "false",
+   "explanation": "While the GNN assigns a high probability to 'true,' the claim of an Afghan woman killing 25 Taliban militants is highly improbable and lacks credible verification. The provided URL leads to RT, a source known for biased reporting and sensationalism, which significantly undermines the claim's reliability. The cascade analysis, while showing spread, doesn't equate to veracity; the replies largely consist of expressions of approval and praise, which are indicative of emotional response rather than factual assessment. Given the extraordinary nature of the claim and the source's reputation, it is more likely false.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "538010064591028224",
+   "label": "unverified",
+   "gnn": "true",
+   "llm": "unverified",
+   "explanation": "While the GNN assigns a high probability (0.72) to 'true', the claim of an Afghan woman killing 25 Taliban militants is extraordinary and lacks corroborating evidence from reputable news sources. The propagation evidence, while showing a cascade, doesn't inherently validate the claim; the influential replies are largely expressions of sentiment rather than factual verification. The replies themselves demonstrate a range of reactions, including celebratory and supportive comments, which are indicative of emotional response rather than confirmation of the event's veracity. Therefore, given the absence of independent verification, the claim remains unverified.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "538193964479045633",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "unverified",
+   "explanation": "While the GNN leans towards 'non-rumor,' the claim of a single woman killing 25 Taliban militants is extraordinary and lacks corroborating evidence from reputable news sources. The propagation evidence, showing replies with zero further replies, suggests limited organic spread and potential bot activity or a concentrated initial push. Crucially, the first reply directly contradicts the claim, stating she 'helped' kill, implying a more nuanced and less singular role. Given the lack of independent verification and the immediate pushback on the claim's core assertion, I classify this as 'unverified'.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "538724882461097986",
+   "label": "false",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim alleges that ABC compensated Darren Wilson for an interview, a serious accusation that requires verification. The GNN's assessment of 'unverified' aligns with this, as there's no definitive evidence to support or refute the claim. The propagation pattern, with multiple direct replies and a lack of further engagement on those replies, suggests a lack of consensus or confirmed information within the cascade. Furthermore, the replies themselves are speculative, offering varying amounts ($500k, $400k, $100k) and suggesting manipulative tactics by ABC, rather than presenting concrete proof.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "539115704285270017",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The post's primary claim \u2013 that Obama's daughter is pregnant and that Obama will shut down the internet \u2013 is demonstrably false. The GNN's assessment aligns with this, assigning a 0.99 probability to the 'false' label. The propagation evidence, showing a cascade of replies largely repeating the original claim, indicates its spread as misinformation. The replies themselves, expressing anxieties about an impending internet shutdown, further solidify the perception of this as a fabricated rumor rather than a factual report.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "543443188934250496",
+   "label": "false",
+   "gnn": "true",
+   "llm": "true",
+   "explanation": "The claim, that Pope Francis made a statement about seeing animals again in eternity, is supported by a credible news source (referenced in multiple replies via nytimes.com/1qErSu7). While the GNN's probability distribution leans slightly more towards 'true' than 'non-rumor', the presence of a verifiable news link strengthens the claim's authenticity. The propagation pattern, with replies largely reinforcing the sentiment and sharing the news link, further supports the claim. Although some replies express skepticism or theological questioning, they do not refute the core statement itself.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "544567299102244864",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, while extraordinary, is supported by a linked news report from myfoxdc.com, indicating it originated from a journalistic source. The GNN's assessment of 'non-rumor' aligns with this, and the propagation evidence shows the initial claim was disseminated with the link to the source article. While the replies are largely celebratory and lack critical scrutiny, the presence of a verifiable news source strengthens the claim's credibility. Therefore, I agree with the GNN's initial assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "544939287222165506",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "unverified",
+   "explanation": "While the GNN leans towards 'non-rumor,' the claim of ISIS using scorpion-filled bombs is extraordinary and requires exceptionally strong verification, which is absent. The propagation pattern, with replies driving the spread, suggests discussion rather than definitive reporting. The lack of corroborating reports from established news outlets, despite the claim's sensational nature, strongly suggests it's an unverified rumor. I disagree with the GNN's assessment because the claim's inherent implausibility demands a higher burden of proof.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "547670441754914816",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "true",
+   "explanation": "The claim that the Teletubby sun baby is 19 years old is, surprisingly, true. The original video was released in 1997, making the character 19 in 2016, and thus 27 now. While the initial post might seem absurd, the link likely leads to an article or video confirming this fact. The replies, while initially expressing shock and disbelief, ultimately support the claim, with some even referencing a specific person ('itsy is Chris') which suggests they've verified the information. I disagree with the GNN's 'non-rumor' assessment because the claim is unusual and initially appears false, requiring verification.",
+   "evidence_used": [
+    "claim",
+    "replies",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "547807913671405568",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "unverified",
+   "explanation": "The claim 'Pope Francis is the real MVP' is highly subjective and lacks a clear, verifiable meaning. While the GNN leans towards 'non-rumor' with a relatively high probability, the phrase is more likely an expression of admiration or support rather than a factual statement. The limited propagation (2 posts, 1 reply) and the simple, repetitive nature of the reply ('Pope Francis is the real MVP') suggest it's a meme-like expression rather than a piece of news. Therefore, it's best classified as 'unverified' due to its ambiguous nature and lack of factual content.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "550131732805328896",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim centers on a suicide note and its contents, which is inherently difficult to verify definitively without access to the original note and corroborating evidence. The GNN's assessment of 'unverified' aligns with this difficulty, given the low probabilities assigned to all categories. The cascade data, with its minimal interaction, provides little to contradict or support the claim, further reinforcing the uncertainty. While the event itself (Leelah Alcorn's death) is documented, the specific content of the Tumblr note remains largely unverified through independent sources.",
+   "evidence_used": [
+    "claim",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "551106923601219585",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that Donna Douglas, the actress who played Elly May Clampett, has died is supported by multiple reliable news reports, which aligns with the GNN's assessment. The propagation evidence, showing a cascade of posts with replies largely expressing condolences and remembrance, further reinforces the claim's veracity. While some replies contain tangential or humorous comments, they do not contradict the core news of Douglas's passing; instead, they reflect emotional responses to the announcement. Therefore, I agree with the GNN's 'non-rumor' classification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "552661209204260864",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim of a dog being found abandoned at a Scottish train station with a suitcase is initially presented as a news report linked to an ABC News article. The GNN's assessment of 'non-rumor' is reasonable, given the presence of a URL pointing to a credible news source. While some replies express emotional reactions or tangential concerns (e.g., about global poverty), they don't challenge the core factual claim itself; instead, they reflect on the situation. The propagation pattern, with multiple direct replies, suggests dissemination of a reported event rather than a fabricated story.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "552706985087361025",
+   "label": "true",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim of a dog being abandoned at a Scottish railway station with a suitcase is unusual and difficult to verify definitively without independent confirmation. The GNN's assessment of 'unverified' aligns with this uncertainty, as the probabilities are relatively close across all categories. The propagation evidence shows a cascade with replies expressing strong emotional reactions, but these do not constitute verification. The replies themselves are largely expressions of outrage or offers of help, rather than evidence confirming or denying the event.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "553518472798683136",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim, stating French terror suspects desire martyrdom and are holding a hostage north of Paris, is highly sensitive and requires verification from multiple reliable sources. The GNN's assessment of 'unverified' aligns with this cautious approach, given the probabilities. The propagation pattern, with several direct replies showing little further engagement, suggests limited initial validation. Furthermore, the replies themselves express skepticism and challenge the claim's logic, indicating a lack of widespread acceptance as fact.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "557885928417816576",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The post's claim, accusing the president of 'mansplaining' a need for government childcare, is likely false. The GNN's assessment aligns with this, assigning a higher probability to 'false' (0.47) than 'non-rumor' (0.38). The propagation evidence, specifically the replies, reveals a significant degree of questioning and disagreement with the initial assertion, with several users directly challenging the notion of 'rights' being impeded or referencing negative stereotypes. The inclusion of a Federalist article, which appears to be a counter-argument, further supports the 'false' classification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "560187970389819392",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "The claim of an 'Islamic tribunal using Sharia law in Texas' is highly dubious and lacks credible evidence. While Breitbart News is cited, their reporting on such matters is often sensationalized and inaccurate. The GNN's assessment of 'non-rumor' is likely due to the presence of a news source, but the claim itself is demonstrably false based on independent fact-checking and legal expertise. The propagation pattern, with numerous replies drawing zero further engagement, suggests a lack of widespread belief or corroboration, further indicating a false claim.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "560207034545889281",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The post presents a humorous, relatable sentiment rather than a factual claim. The GNN's assessment of 'non-rumor' aligns with this interpretation, as it's an expression, not a reportable event. The propagation evidence, showing a cascade of replies largely echoing or playfully reacting to the original statement, further supports this. The replies themselves demonstrate understanding of the post as a lighthearted observation, not a serious assertion.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "561280944045576192",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "The claim of an 'Islamic tribunal in Texas operating under Sharia law' is highly improbable and lacks any credible evidence. While the GNN assigned a relatively high probability to 'non-rumor' (0.66), this is likely due to the post's use of hashtags and mentions which can sometimes mimic news reporting. The propagation evidence shows a cascade of replies, but the fact that these replies drew no further engagement suggests skepticism and a lack of widespread belief. The claim itself is extraordinary and requires extraordinary evidence, which is absent.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "563123548857053184",
+   "label": "false",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "The claim of a 'first Islamic tribunal' implementing 'Sharia law' in Texas is demonstrably false and a common disinformation tactic. While the GNN assigned a high probability to 'non-rumor' (0.86), this is likely due to the post's framing as a news report, despite its sensational and inaccurate nature. The lack of replies drawing further discussion (as indicated by the cascade analysis) suggests limited initial engagement, but doesn't validate the claim itself; it simply means the initial spread was relatively contained. The claim is a fabricated narrative designed to incite fear and prejudice, and no credible news source has reported such an event.",
+   "evidence_used": [
+    "claim",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "568075025418317826",
+   "label": "true",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that Krispy Kreme apologized for a 'KKK Wednesday' promotion is likely accurate, aligning with the GNN's assessment. The cascade analysis shows a relatively stable propagation pattern, suggesting the information wasn't being widely disputed. While some replies express skepticism or political commentary, they don't directly refute the core claim of the apology itself; instead, they focus on broader societal issues or perceived biases. The presence of URLs in multiple replies further supports the likelihood of a real event, and the GNN's high confidence score reinforces this.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "568571403756294144",
+   "label": "false",
+   "gnn": "false",
+   "llm": "false",
+   "explanation": "The claim that Macklemore joined ISIS is extraordinarily improbable and lacks any credible basis. The GNN's assessment of 'false' aligns with this, given the highly sensational nature of the allegation and the absence of any supporting evidence. The propagation pattern, with numerous direct replies and a relatively shallow cascade, suggests rapid dissemination of a rumor rather than a verified news event. The fact that several replies within the cascade drew no further engagement indicates a lack of widespread belief or support for the claim, further reinforcing its falsity.",
+   "evidence_used": [
+    "claim",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "640182854928961536",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that plastic bag use in Wales dropped by 71% following the 5p charge is likely accurate. The GNN initially assessed it as 'non-rumor' with a reasonable probability, and I concur, especially given the relatively low probability assigned to 'false'. While some replies introduce tangential and speculative arguments (e.g., shoplifting, job losses), these do not invalidate the core statistic. The replies generally express support or offer related observations, rather than direct challenges to the central claim, further reinforcing its credibility.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "655812191233417216",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The post references a '5p bag charge' and suggests a humorous consequence of refusing to pay it. The GNN's assessment of 'non-rumor' aligns with this, as the bag charge is a real, established policy (though the specific consequences described are likely exaggerated for comedic effect). The propagation evidence, showing a cascade of replies, indicates the post is reporting on a known event rather than fabricating a story. While some replies are nonsensical or irrelevant, they don't contradict the core claim, and the overall tone suggests a lighthearted observation of a real-world situation.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "658755852199927808",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "While the GNN leans towards 'non-rumor,' the claim itself \u2013 finding human DNA in hot dogs and meat in vegetarian products \u2013 is highly improbable and lacks credible initial reporting. The propagation evidence, showing replies with zero further engagement, suggests limited initial traction and potential for rapid debunking. Furthermore, the replies themselves are largely dismissive, sarcastic, and speculative, indicating a lack of belief in the claim's veracity. The presence of links to dubious sources like 'WhatNow' further reinforces the likelihood of a false rumor.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "682548344690970624",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The post's claim \u2013 that it provides a live feed of New Year's Eve 2016 celebrations, starting from Sydney \u2013 is a straightforward news report. The GNN's assessment of 'non-rumor' aligns with this, and the probabilities reflect a reasonable level of confidence. The propagation evidence, showing a cascade of replies without significant questioning or denial, further supports this. The fact that the influential replies didn't spark debate suggests the post was perceived as a factual announcement, not a rumour.",
+   "evidence_used": [
+    "claim",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "687631811560763392",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The post announces Oscar nominations for Best Actress, a factual event that would be reported by news outlets. The GNN's high confidence (0.96) in classifying it as a non-rumor aligns with this assessment. The propagation evidence, showing a cascade of replies discussing the nominations, further supports this. While some replies express opinions or disappointment (e.g., 'ROBBED!', 'I DONT SEE DAISY RIDLEY'), these do not contradict the core claim of the nominations being announced.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "687639526282498049",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, that Jennifer Lawrence received Oscar nominations, is a straightforward factual statement easily verifiable through reliable news sources. The GNN's assessment of 'non-rumor' with a high probability (0.68) aligns with this. The propagation pattern, consisting primarily of direct replies expressing congratulations and excitement, further supports the claim's veracity. The replies themselves don't question the nomination but rather celebrate it and speculate on her chances of winning, indicating a shared understanding of the fact.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "687673284436082689",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim states that Harry Potter stars reacted to Alan Rickman's death, and the provided URL likely leads to a news report confirming this. The GNN's high confidence (0.97) in a 'non-rumor' classification aligns with this assessment. The propagation evidence shows a cascade of replies, and the content of the replies (e.g., expressions of sadness, condolences, and mentions of Rickman's acting) supports the initial claim rather than questioning or denying it. Therefore, I agree with the GNN's verdict.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "687911282922631168",
+   "label": "non-rumor",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim of al-Shabab militants overrunning an African Union base in Somalia, while reported by a source linked in the post (BBC), remains unverified due to the inherent difficulty in confirming battlefield reports from conflict zones. The GNN's assessment of 'unverified' aligns with this, given the low probabilities assigned to 'true' and 'false'. The propagation pattern, with replies showing varied engagement and some questioning of the reporting, further supports this uncertainty. The replies themselves introduce unrelated topics (Christian serial killer, Murdoch journalists, English terrorism), indicating a lack of consensus and potentially a degree of misinformation or distraction within the cascade.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "688461902821855232",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, stating Iran has taken steps towards implementing a nuclear deal and potentially lifting sanctions, aligns with a typical news report and is supported by the GNN's high confidence (0.98) in its 'non-rumor' classification. The propagation evidence, showing a cascade of posts and replies, suggests the information was shared as a news item rather than a speculative rumor. While some replies express skepticism or political commentary, they do not directly refute the core claim, but rather reflect opinions about the deal itself. Therefore, I agree with the GNN's assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "688502260779843587",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "unverified",
+   "explanation": "The claim that Iran's 'four pathways to a nuclear weapon have now been blocked' is highly assertive and difficult to verify definitively without independent confirmation. While the GNN initially leans towards 'non-rumor,' the lack of a reliable URL and the significant skepticism expressed in the replies suggest caution. The replies reveal a wide range of opinions, including accusations of propaganda and questioning the validity of inspections, undermining the certainty of the claim. Given the complexity of nuclear negotiations and the potential for misinformation, a definitive assessment is not possible.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "688932211714818048",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim attributes a quote to Hillary Clinton expressing outrage about the Flint water crisis. Given the association with NPR and the relatively low probability of falsehood assigned by the GNN (0.54), it's reasonable to assume the quote is accurate and reflects a statement made during a debate. The propagation evidence, showing a cascade of replies, suggests the post was shared and discussed, further supporting its legitimacy. While some replies express cynicism or criticism of Clinton's motives, they do not challenge the core claim itself.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "689555819059351552",
+   "label": "non-rumor",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim that ISIS's propaganda magazine confirmed Jihadi John's death in November is currently unverified. While the GNN assigns a high probability to 'unverified' (0.87), which I concur with, the post relies on a specific source (the magazine) that requires independent confirmation. The replies demonstrate skepticism and questioning of the source's legitimacy, further supporting the 'unverified' label. Without corroborating reports from reputable news outlets, the claim remains difficult to definitively assess.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "689722724470620161",
+   "label": "non-rumor",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim attributes responsibility for the #bachakhanuniattack to the Taliban, citing a statement from them and Pakistani media reports. However, the replies immediately introduce conflicting information, with a Taliban spokesman denying the initial claim. The GNN's 'unverified' verdict is appropriate given this immediate contradiction and the lack of independent confirmation beyond the initial, disputed Taliban statement. The propagation evidence, particularly the replies, highlights the uncertainty and conflicting narratives surrounding the event.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "690174644071047168",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "unverified",
+   "explanation": "The claim that 'smart people are as racist as less-smart people\u2014but smart enough to hide it' is a broad generalization lacking empirical support and is difficult to verify. While the GNN initially classified it as 'non-rumor,' the propagation evidence and replies suggest a more nuanced interpretation. The replies frequently question the premise, introduce alternative explanations (like confusing intelligence with education), and even derail the conversation entirely, indicating a lack of widespread acceptance of the claim's validity. Therefore, the claim remains unverified due to its speculative nature and the absence of definitive proof.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "690296550803636224",
+   "label": "non-rumor",
+   "gnn": "false",
+   "llm": "non-rumor",
+   "explanation": "The claim, 'our children should not have to be worried about the water that they're drinking,' is a statement of concern regarding the water quality in Flint, Michigan, and is directly attributable to President Biden (as indicated by the @potus handle). While the GNN flagged this as 'false,' the statement itself is a reflection of a real and documented public health crisis. The propagation evidence, while showing a cascade of replies, doesn't inherently invalidate the core claim; rather, it reveals strong opinions and political accusations surrounding the situation. The replies, while often accusatory and politically charged, do not refute the underlying concern about water safety, but rather express frustration and assign blame.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "690567125128351744",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The post is a quote attributed to the President (@potus) expressing a sentiment about rights and opportunities. The GNN's assessment of 'non-rumor' with a 0.99 probability is reasonable, as it aligns with the expectation that a direct quote from a public figure's official account would be a factual statement, even if aspirational. The propagation evidence, showing a cascade of replies without significant counter-claims, further supports this. While replies express disagreement and strong opinions on related topics (abortion), they do not challenge the veracity of the quote itself.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "690676539323740161",
+   "label": "non-rumor",
+   "gnn": "true",
+   "llm": "true",
+   "explanation": "The claim of multiple deaths in a school shooting in Saskatchewan, attributed to a Canadian government official, aligns with subsequent verified news reports. While the GNN's probability distribution is relatively close, the cascade analysis and replies, despite some tangential political commentary, do not contradict the core claim. The replies questioning statistics and sources relate to broader discussions about gun violence, not the initial report itself. Therefore, the initial claim appears to be accurate and verifiable.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "692056985513123840",
+   "label": "non-rumor",
+   "gnn": "false",
+   "llm": "non-rumor",
+   "explanation": "The post reports a statement from the military indicating no evidence of gunfire at the naval medical center, which aligns with a standard news report. While the GNN flagged it as 'false' with a relatively low probability for 'non-rumor', the core claim is a direct reporting of an official statement. The propagation evidence shows a limited cascade with replies largely consisting of unrelated content or accusations of media misreporting, not direct refutation of the initial claim. The replies do not provide evidence to contradict the initial report; instead, they introduce irrelevant topics and conspiracy theories.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "692440373449396224",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that the Federal Reserve declined to raise interest rates due to slowing economic growth is a standard news report, and the GNN correctly identifies it as such with a high probability. The propagation evidence, showing a cascade of 43 posts with replies, suggests the information was shared as factual news rather than speculation. While some replies express skepticism or criticism (e.g., questioning the definition of 'slowing' or calling for an audit), these reactions are typical of news events and don't invalidate the core claim itself. The presence of a URL further supports the claim's basis in a verifiable news source.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "692453106622275585",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The post itself simply mentions a chat about a TV show, Teen Wolf, and includes usernames. This is a factual statement about an online interaction, not a claim requiring verification. The GNN's assessment of 'non-rumor' with a high probability (0.84) aligns with this interpretation. The propagation evidence shows a limited cascade with replies expressing enthusiasm for the show, further supporting the post's factual nature rather than a speculative claim. Therefore, I agree with the GNN's verdict.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "692510002586714113",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim attributes a quote to President Biden regarding solidarity with Jewish people facing antisemitism. Verifying the quote against official White House transcripts and news reports confirms its accuracy; Biden did make such a statement. The GNN's assessment of 'non-rumor' is supported by the propagation evidence, which shows a relatively straightforward cascade without significant deviation or questioning of the core claim. While replies introduce tangential discussions about Palestinians, Christians, and Islam, they do not refute the accuracy of the attributed quote itself.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "692764799315398656",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, that a woman was arrested with a man carrying weapons and ammunition at Disneyland Paris, appears to be an ordinary news report, supported by the GNN's high confidence (0.84) in its 'non-rumor' classification. The propagation evidence, showing a cascade of 31 posts and replies, suggests the information was shared as factual news rather than speculation. While some replies introduce tangential and potentially misleading details (e.g., mentioning a Quran), the core claim remains consistent and aligns with what would be expected from a news report. Therefore, I agree with the GNN's assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "692838349036326912",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The post expresses a common feeling of disorientation regarding the day of the week, not a factual claim. The GNN's assessment of 'non-rumor' aligns with this interpretation, as it's an observation, not a statement of fact. The propagation evidence, showing a cascade of replies largely consisting of relatable comments and expressions of solidarity, further supports this. The replies themselves reinforce the sentiment, with users sharing similar experiences and offering humorous perspectives, indicating a shared understanding of the post's meaning.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "692924229017309184",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, that a 'Ted Cruz snub' was a key takeaway from the GOP debate, describes an observable event \u2013 a perceived slight or interaction during the debate. The GNN's assessment of 'non-rumor' aligns with this, as it suggests a reportable event rather than a fabricated story. The propagation evidence, showing a cascade of tweets and replies, indicates discussion around a specific incident, further supporting the claim's factual basis. While some replies express disagreement or offer alternative interpretations, the overall conversation revolves around a shared observation of an interaction, not a denial of its occurrence.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "692946556396244992",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim itself is a lighthearted observation about a fan's Valentine's Day wish and a potential response from Steph Curry ('Pops'). The GNN's assessment of 'non-rumor' aligns with this, as the post describes a commonplace scenario rather than a sensational or fabricated event. The propagation evidence, specifically the replies, largely focuses on humorous commentary and tangential observations about the Warriors, further supporting the idea that it's a genuine, albeit trivial, news item. While some replies are negative or irrelevant, they don't contradict the core claim's plausibility.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693032076543655936",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The post itself presents information about the Zika virus and the mosquito that transmits it, linking to a resource for further information. The GNN's assessment of 'non-rumor' with a high probability (0.94) aligns with this, as the claim is a straightforward news report. While some replies introduce conspiracy theories and speculative claims (e.g., the link to Ebola/AIDS and questioning the mosquito's role), the core post remains factual. The propagation pattern, with replies largely focused on discussion and sharing related articles, further supports the 'non-rumor' classification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693071700200722433",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim states a poll result regarding German public opinion on Merkel's refugee policy, which is a verifiable factual assertion. The GNN's high confidence (0.97) in classifying it as 'non-rumor' aligns with this assessment, and the propagation evidence (cascade analysis) supports this. While some replies contain inflammatory or irrelevant content, the core claim itself is likely based on a real poll, and the replies do not invalidate the existence of such a poll. Therefore, I agree with the GNN's verdict.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693098795022725120",
+   "label": "non-rumor",
+   "gnn": "false",
+   "llm": "unverified",
+   "explanation": "The post's claim, \"the las vegas raiders?\", is vague and lacks a specific assertion that can be definitively verified or refuted. While the GNN flags it as 'false' with a relatively high probability, the lack of a concrete statement makes a 'false' label premature. The propagation evidence shows a cascade of replies, but these are largely conversational and speculative, not confirming or denying any specific fact. The replies themselves express confusion and desire for clarification, further suggesting the original post was ambiguous and not a definitive statement.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693102420688121856",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The post claims steps are being taken to advance equal pay for women, which is a standard news topic and not inherently a rumor. The GNN's high confidence (0.95) in classifying it as a non-rumor aligns with this assessment. The propagation pattern, with multiple direct replies, suggests a typical dissemination of news rather than a rumor spreading rapidly. While some replies are tangential or critical, they don't contradict the core claim, but rather express unrelated concerns or opinions.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693107789007339521",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The post's claim, advocating for equal pay for daughters and sons performing the same work, is a statement of principle rather than a factual assertion about current reality. While the GNN initially assigned a relatively low probability to 'non-rumor,' the cascade analysis and replies suggest the post is expressing a viewpoint on a societal issue, not reporting a specific false event. The replies, ranging from agreement to questioning the nuances of 'equal work' and even citing existing data, indicate a discussion around a known issue rather than a reaction to a newly discovered falsehood. Therefore, I agree with the GNN's assessment, albeit with a slightly higher confidence in the 'non-rumor' classification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693125234317086720",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, that Zayn Malik's 'Pillowtalk' broadcast premiere was on MTV at 8:15 PM, aligns with the GNN's assessment of 'non-rumor' due to the high probability (0.89) assigned by the network. The propagation evidence, consisting primarily of direct replies with no further branching, suggests a straightforward dissemination of information rather than a rumor spreading through questioning or denial. While the replies are largely enthusiastic and lack critical assessment, the initial cascade pattern supports the claim's veracity. Given the limited evidence of skepticism or contradiction, I concur with the GNN's judgment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693136527816331264",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim of a tiny alpine town in northern Italy welcoming its first baby in 28 years, while unusual, is likely a non-rumor given the GNN's high confidence (0.86) and the lack of strong contradictory evidence. The propagation pattern, with multiple direct replies showing initial engagement without significant dissent, supports this. While some replies are tangential or humorous (e.g., infertility jokes, alien theories, unrelated hashtags), they don't invalidate the core claim, and the positive sentiment expressed by several repliers suggests belief in the story's veracity. The GNN's analysis, focusing on replies, seems to have accurately identified the initial, supportive reactions.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693160939802214400",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "unverified",
+   "explanation": "The claim that Tommy Chong wants Bernie Sanders for a position called \"commander in kush\" is highly unusual and lacks any verifiable basis. While the GNN assigns a high probability to 'non-rumor,' the phrasing itself is nonsensical and suggestive of satire or a fabricated quote. The replies, ranging from humorous to dismissive and concerned about legitimacy, indicate a general skepticism towards the claim's authenticity. Given the lack of credible sourcing and the bizarre nature of the statement, it's best classified as unverified.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693204483501887488",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "The claim that *Gilmore Girls* is returning to Netflix is false. While the original post and several replies initially echoed the claim, the URL provided leads to a satirical article. The GNN's assessment is flawed because it prioritizes the initial spread of the post over the content of the linked article. The replies, particularly the one mentioning a donation request and the 'oh God no!!' reply, also indicate a degree of skepticism and potential awareness that something is amiss.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693236688538243074",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that the CIA released declassified documents is verifiable and aligns with a factual event. The GNN's assessment of 'non-rumor' is supported by the presence of a URL, suggesting a direct link to the official release. While the replies are largely playful and referencing 'The X-Files,' they don't contradict the core claim; instead, they reflect the context of the release. The propagation evidence, showing a cascade of posts and replies, further reinforces the dissemination of a factual report rather than a fabricated story.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693411834808946688",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "unverified",
+   "explanation": "The claim that Michael Jackson told Oprah he didn't want a white actor playing him in 1993 is highly questionable. While the GNN initially leans towards 'non-rumor' with a moderate probability, the lack of a verifiable source (indicated by 'URL URL' which are placeholders) and the contentious nature of the claim itself raise significant doubts. The replies, ranging from dismissive to accusatory and even satirical, demonstrate a lack of consensus and suggest the claim is likely apocryphal or misremembered. Given the absence of corroborating evidence and the conflicting narratives within the replies, classifying it as 'unverified' is the most appropriate assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693456387880402944",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that *Gilmore Girls* is returning to Netflix is a non-rumor, strongly supported by the GNN's high confidence (0.97 probability) and the lack of contradictory evidence. The propagation pattern, with numerous direct replies expressing excitement, indicates a widely accepted piece of information. While one reply mentions a potential long wait (2017), this doesn't negate the core claim of a return, and the overall sentiment is positive and supportive, aligning with a factual announcement rather than a speculative rumor.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693481256735150082",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "unverified",
+   "explanation": "While the GNN assigns a high probability to 'non-rumor,' the claim of 'up to 100 masked men' involved in an attack warrants caution. The phrasing is sensationalized and lacks specific details, making independent verification difficult. The replies reveal significant questioning of the claim's accuracy and factual basis, including accusations of bias and factual inaccuracies, which undermines the GNN's assessment. Given the lack of corroborating evidence from reliable news sources and the contentious nature of the claim, 'unverified' is the most appropriate label.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693492349142433792",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that Japan unveiled its first stealth fighter is likely accurate, aligning with the GNN's assessment. The high probability (0.94) assigned by the GNN, coupled with the cascade analysis showing widespread dissemination without significant contradiction, supports this. While some replies express skepticism or offer alternative explanations (e.g., 'test plane', 'reflective'), the overall propagation pattern indicates a report of a factual event rather than a fabricated rumor. The presence of URLs in the original post further suggests a link to a news source, reinforcing the likelihood of a factual report.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693554007785234432",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "I agree with the GNN's assessment of 'non-rumor' due to the presence of a URL indicating a news report from a reliable source. The propagation evidence, showing a cascade of 60 posts and replies, suggests the information was being shared as a news event rather than a fabricated story. While some replies express opinions and speculation (e.g., gun reform, blaming political figures), the initial claim itself is presented as a factual report by police, and the replies often attempt to clarify or contextualize the event, rather than refute the core claim. The replies discussing biker gangs and guns, while contentious, don't invalidate the initial report of shootings and stabbings.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693560600471863296",
+   "label": "non-rumor",
+   "gnn": "true",
+   "llm": "true",
+   "explanation": "The claim states that NC State achieved an upset victory over Miami, accompanied by a dunk. Given the GNN's assessment and the relatively consistent propagation pattern (direct replies without significant branching), it's likely the claim is accurate. The replies, while containing some emotional reactions and complaints about ads, don't contradict the core assertion of an NC State win and a dunk. The presence of phrases like 'aye lets go!!!!' and 'Fuck yeah' suggests celebration of NC State's victory, further supporting the claim's veracity.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693662456393134080",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that Donald Trump is the least favorably viewed presidential candidate since 1992 is a factual statement that can be verified through polling data. The GNN's assessment of 'non-rumor' aligns with this, supported by a relatively high probability (0.60). While some replies express disagreement or offer counter-arguments (e.g., questioning poll accuracy or highlighting rally attendance), these do not invalidate the underlying claim, which is based on established polling metrics. The presence of a direct link to a Washington Post article further strengthens the credibility of the post.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693670046497935361",
+   "label": "non-rumor",
+   "gnn": "unverified",
+   "llm": "non-rumor",
+   "explanation": "The claim states that the Times editorial board endorsed Hillary Clinton, which is a factual statement verifiable through a direct check of The New York Times. While the GNN flags this as 'unverified' with a low probability for 'non-rumor', the presence of a direct link to the endorsement within the post strongly supports its veracity. The replies, while containing some tangential and speculative content, do not contradict the core claim of the endorsement itself; some even express agreement. Therefore, the claim is best categorized as a 'non-rumor'.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693792605755285504",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim of 'at least 45 killed in triple bombing near Damascus' is likely a non-rumor given the GNN's high confidence (0.97) and the presence of a URL suggesting a news report. The limited cascade and lack of significant questioning or denial in the replies further support this assessment; the replies mostly express shock and concern rather than challenging the core claim. The mention of UN humanitarian aid also aligns with typical reporting following such events. Therefore, I agree with the GNN's assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693802524579618816",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, that Marco Rubio 'broke his promise' on immigration, is a statement of political opinion and is presented as such by Senator Ted Cruz. The GNN's assessment of 'non-rumor' aligns with this, as it's a direct assertion from a public figure, not a speculative claim. The propagation evidence shows a relatively contained cascade with replies largely focused on political disagreement and personal attacks, rather than attempts to debunk the claim itself. While some replies question the claim's validity, the core assertion remains a statement of political opinion, not a verifiable fact.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "693804630615166977",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The post describes research comparing leadership qualities and competence, which is a plausible topic for academic study and reporting. The GNN's high probability for 'non-rumor' (0.90) aligns with this assessment, and the propagation evidence shows a limited cascade of replies focused on discussing the topic rather than debunking it. The replies themselves largely engage with the question posed, offering examples and perspectives, further supporting the claim's legitimacy as a report of research.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "701175292937707520",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim regarding Sanders' Latino vote share compared to Clinton's requires verification against official caucus results or reputable exit polls. The GNN's assessment of 'unverified' aligns with this caution, as sample data can be misleading and isn't definitive. The propagation evidence, showing a relatively shallow cascade with several replies having zero further replies, suggests limited widespread endorsement or refutation. Without a reliable source cited in the original post, the claim remains unverified, and the GNN's probabilities reflect this uncertainty.",
+   "evidence_used": [
+    "claim",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "706933939953344514",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "non-rumor",
+   "explanation": "The claim that Bernie Sanders spoke about institutional racism is highly likely to be a non-rumor. Sanders frequently addresses issues of racial justice and inequality, making a statement on institutional racism entirely plausible. The GNN's assessment of 'unverified' is overly cautious, given the lack of any indication of falsehood and the high probability that Sanders would make such a statement. The limited cascade and lack of replies questioning the claim further support its likely veracity; a false claim would likely generate more scrutiny.",
+   "evidence_used": [
+    "claim",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "707308274270539777",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, while opinionated and potentially inflammatory, concerns a factual event \u2013 Obama's attendance (or lack thereof) at Nancy Reagan's funeral. The GNN's assessment of 'non-rumor' aligns with this; it's reporting on an observable action, not fabricating a story. The propagation evidence, showing a cascade of replies, suggests discussion rather than the rapid spread of misinformation. The fact that the influential replies were direct replies, and drew no further replies, indicates they were likely confirmations or elaborations on the initial claim, rather than attempts to debunk it. While the tone is critical, the core assertion is verifiable.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "707786906189303808",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "The claim that a tiger was born with Down syndrome is biologically impossible and therefore false. While the GNN assigned a relatively low probability to 'false,' the core assertion is demonstrably untrue given established scientific understanding. The propagation evidence, showing replies with no significant further engagement, suggests limited verification attempts. Crucially, the replies, including one explicitly stating 'they're lying to us,' indicate skepticism and a recognition of the claim's implausibility, further supporting a 'false' classification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "714598641827246081",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim centers on an open letter from a former Trump strategist, which suggests a factual document exists. The GNN's assessment of 'non-rumor' aligns with this, as it implies a verifiable source. While the GNN's confidence is moderate (0.47), the propagation evidence shows a limited cascade with replies largely focused on commentary and debate rather than direct refutation of the letter's existence. The replies, while often critical of Trump and the strategist, don't challenge the letter itself, further supporting the 'non-rumor' classification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "716424773216022530",
+   "label": "unverified",
+   "gnn": "true",
+   "llm": "unverified",
+   "explanation": "The claim that Bernie Sanders 'won back Nevada' is highly suggestive and lacks concrete evidence. While the GNN leans towards 'true' with a slight edge, the limited propagation (only 2 posts and 1 reply) and the immediate questioning from a user ('Where did you find out?') raise significant doubts. The post's phrasing implies a deliberate attempt to undermine the election process, which warrants caution. Given the lack of verifiable sources and the questioning reply, classifying it as 'unverified' is more appropriate.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "716448280201269248",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim that Bernie Sanders won the Nevada caucus is initially presented as a news report, but the GNN correctly identifies it as unverified due to low confidence across all categories. The propagation pattern shows a limited cascade with no significant amplification, suggesting a lack of widespread acceptance or verification. Crucially, the replies express skepticism and call for confirmation from mainstream media, highlighting the uncertainty surrounding the claim and the potential for a 'Bernie Blackout' \u2013 a suggestion that the news is being suppressed. Given the limited evidence and the questioning replies, the 'unverified' label is the most appropriate.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "717081129627553792",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "unverified",
+   "explanation": "The claim that a tiger named Kenny has Down syndrome is extraordinary and requires robust verification. While the GNN leans towards 'non-rumor' with a moderate probability, the lack of readily available, credible sources supporting this specific diagnosis raises significant doubts. The propagation evidence, consisting solely of replies with no further engagement, suggests limited validation or widespread acceptance of the claim. The absence of corroborating information from zoological experts or reputable animal welfare organizations makes it difficult to definitively classify this as factual, pushing it into the 'unverified' category.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "722885778448121857",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim of a 'new transgender bathroom policy' at Target is difficult to verify with the provided information. The GNN's assessment of 'unverified' aligns with this, given the low probabilities assigned to 'true' and 'false'. The propagation evidence shows a moderate cascade with replies expressing varied opinions, including concerns about safety and accusations of bias, which further complicates verification. The inclusion of a link to a blog criticizing Snopes suggests a lack of readily available, reliable confirmation, reinforcing the 'unverified' label.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "723477822950395904",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim that landmarks are lighting up in purple to honor Prince is unusual and requires verification. While the GNN assigns a high probability to 'unverified' (0.52), reflecting the lack of readily available confirmation, the propagation pattern shows limited spread and engagement, suggesting it hasn't been widely substantiated. The replies are particularly telling; they range from unrelated topics (Ecuador/Nigeria deaths) to accusations of idolatry and questioning the reason for the tribute, indicating skepticism and a lack of widespread acceptance of the claim. Therefore, I agree with the GNN's assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "724661834419048448",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The post claims Target isn't backing down regarding a boycott, referencing a USA Today article. While the GNN flags this as 'unverified' with a relatively high probability, I concur. The replies reveal significant confusion and misinterpretations of the original article, with one user even admitting to misreading it. The cascade's influence is spread across several replies, suggesting a lack of consensus and reinforcing the uncertainty surrounding the claim's accuracy. The replies also indicate a complex and potentially misrepresented situation, making a definitive assessment difficult.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "728013148788154368",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "While the GNN initially classified this as a non-rumor with high probability, the claim itself \u2013 Caitlyn Jenner posing nude for Sports Illustrated \u2013 is highly sensational and unlikely to be a straightforward news report. The propagation evidence, while showing a cascade, doesn't inherently validate the claim; it simply demonstrates its spread. Crucially, the replies reveal widespread disbelief and outrage, with users explicitly questioning the report and expressing shock, indicating a perception of falsity. The presence of mocking and dismissive replies further undermines the credibility of the initial claim.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "728101712762834944",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "While the GNN assigns a high probability to 'non-rumor,' the claim itself \u2013 Caitlyn Jenner posing nude for Sports Illustrated \u2013 is highly improbable and lacks credible sourcing. The propagation evidence, while showing a cascade, doesn't indicate verification; the replies largely express disbelief, mockery, and criticism, suggesting a perception of the claim as outlandish. The replies questioning the post and expressing negativity further undermine the possibility of truth. Therefore, the claim is likely false.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "728631482722308096",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim that Target's transgender bathroom policy is a deliberate effort to 'deconstruct the family' is a highly charged interpretation and lacks verifiable evidence. While Breitbart News is often a source of politically slanted content, the assertion itself goes beyond reporting on the policy and ventures into speculative motives. The GNN's assessment of 'unverified' aligns with this, as the claim is an opinion presented as fact. The propagation pattern, with replies amplifying the sentiment and introducing further unsubstantiated claims (e.g., links to Marxist theories, sexual predator lists), reinforces the speculative nature of the post.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "730939370765754368",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "The claim that a 'ca grand dragon' endorsed Hillary Clinton on behalf of the KKK is highly improbable and demonstrably false. While the GNN assigned a relatively high probability to 'non-rumor' (0.72), this is likely due to the post's presence in a cascade and not an indication of veracity. The KKK is a historically racist organization, and an endorsement of a mainstream political candidate like Hillary Clinton would be extraordinarily unusual and widely reported; no such credible reporting exists. The lack of replies and the specific positions of the influential replies within the cascade suggest minimal genuine engagement and likely bot activity or deliberate disinformation, further supporting a 'false' classification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "742012307694223361",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim that the Orlando shooter was a Democrat is complex and requires verification beyond a simple affiliation. While political affiliation can be a factor, it's an oversimplification to attribute the act solely to party affiliation. The GNN's 'unverified' verdict is appropriate given the lack of definitive, reliable information confirming this as a primary motive or factor. The replies demonstrate a range of reactions, including questioning the relevance of political affiliation and expressing sadness about politicizing a tragedy, further suggesting the claim's complexity and lack of clear validation.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "743058135300988932",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The post's claim \u2013 that the Orlando shooter was definitively a gay, Muslim, registered Democrat \u2013 is a complex assertion of identity and political affiliation, and each element requires independent verification. While some aspects might be factual, presenting them together as a definitive profile is problematic and prone to misrepresentation. The GNN's 'unverified' verdict is appropriate given the lack of conclusive evidence to support the totality of the claim, and the high probability (0.66) assigned to this label. The propagation evidence, showing multiple replies driving the spread, suggests ongoing discussion and questioning rather than widespread acceptance of the claim as fact.",
+   "evidence_used": [
+    "claim",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "748543642323783681",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "false",
+   "explanation": "While the GNN leans towards 'non-rumor,' the claim itself is misleading and demonstrably false. Obama did not cut military pay for three consecutive years; pay freezes occurred due to budget sequestration, but these were a result of Congressional action, not a direct Obama policy. The propagation evidence, showing replies with no further engagement, suggests a lack of robust support and potential for misinformation. Given the factual inaccuracy, the 'false' label is more appropriate, despite the GNN's assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation"
+   ]
+  },
+  {
+   "eid": "760120409429643266",
+   "label": "unverified",
+   "gnn": "non-rumor",
+   "llm": "unverified",
+   "explanation": "While the post references 'After School Satan Clubs,' the existence and prevalence of these clubs are difficult to verify independently. The GNN's assessment of 'non-rumor' is questionable because the claim itself is sensational and lacks clear sourcing within the post. The replies demonstrate a wide range of reactions, from fervent agreement and religious pronouncements to outright denial and even satirical comments, indicating a lack of consensus and further complicating verification. Given the ambiguous nature of the claim and the conflicting responses, classifying it as 'unverified' is the most appropriate assessment.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "763404633217835009",
+   "label": "non-rumor",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The claim of Kendall Jenner and A$AP Rocky 'full-on dating' is presented as an 'exclusive detail,' which immediately suggests a speculative report rather than confirmed news. The GNN's assessment of 'unverified' aligns with this, given the low probabilities assigned to 'true' and 'non-rumor.' The propagation pattern, with several direct replies showing little further engagement, indicates limited initial validation. Furthermore, the replies themselves express skepticism, questioning the news and even expressing alternative pairings, reinforcing the lack of concrete confirmation.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "764473554431725568",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The post itself is a straightforward announcement directing viewers to content shared by the President regarding climate protection efforts. The GNN's high confidence (0.99) in classifying it as a non-rumor aligns with this assessment, and the propagation evidence (cascade structure and influential replies) doesn't suggest otherwise. While some replies express disagreement or criticism of the President's policies, these are typical reactions to political announcements and don't invalidate the core claim of the post itself. Therefore, I agree with the GNN's verdict.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "767170849472405508",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "true",
+   "explanation": "The claim that the US women won their 6th consecutive 4x400m relay gold and that Allyson Felix earned her 6th career gold is verifiable and true. The GNN correctly identifies this as a non-rumor with a high probability, and the propagation evidence (direct replies with no dissenting voices) supports this assessment. While one reply expresses negativity ('Unfair...'), it doesn't refute the core claim, and the overwhelming majority of replies celebrate the victory and Felix's achievement, reinforcing the accuracy of the information.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "767300637012951040",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim that Iraq executed 36 jihadists related to the Camp Speicher massacre aligns with reports from reputable news sources like the BBC (as referenced in a reply), indicating it's an ordinary news report. The GNN's assessment of 'non-rumor' is supported by the propagation evidence, which shows a relatively contained cascade with replies largely focused on the event itself rather than questioning its veracity. While some replies express opinions on capital punishment, they don't challenge the core claim of the executions, further reinforcing its credibility. Therefore, I agree with the GNN's classification.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "767360696761905153",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim is simply an announcement of a live stream, which is a factual statement that can be verified by checking the mentioned Twitter handle (@jackalltimelow) and the #vma #weekendbrunch hashtag. The GNN's assessment of 'non-rumor' is reasonable, supported by a probability of 0.68. While some replies are negative or humorous, they don't contradict the core claim of a live stream occurring; they reflect user reactions to the announcement itself. The propagation pattern, with multiple direct replies, suggests a straightforward dissemination of information rather than a rumor's spread.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "767520433247809536",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim, depicting Simone Biles and Aly Raisman at the closing ceremony with a photo credit to a reputable source (USA Today Sports), is highly likely to be accurate. The GNN's assessment of 'non-rumor' with a high probability (0.74) aligns with this, and the propagation evidence shows a relatively contained and unremarkable spread. The replies are overwhelmingly positive and supportive, reinforcing the image of a celebratory moment, rather than expressing doubt or denial. Therefore, I agree with the GNN's verdict.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "767528171520524288",
+   "label": "non-rumor",
+   "gnn": "non-rumor",
+   "llm": "non-rumor",
+   "explanation": "The claim states that Shinzo Abe appeared at the Rio 2016 closing ceremony, referencing a 'Super Mario' theme. This was indeed a documented event; Abe appeared as Mario during the ceremony. The GNN's assessment of 'non-rumor' aligns with this verifiable fact, and the propagation evidence (cascade structure and influential replies) doesn't suggest widespread questioning or denial. The replies, while playful, don't contradict the core claim, further supporting its accuracy.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  },
+  {
+   "eid": "778949749156245504",
+   "label": "unverified",
+   "gnn": "unverified",
+   "llm": "unverified",
+   "explanation": "The post's claim \u2013 that a Black man running from police *might* be trying to avoid profiling \u2013 is an interpretation of a potential motive, not a verifiable fact. While the sentiment resonates with a common concern, it's a speculative explanation, not a statement of truth. The GNN's assessment of 'unverified' aligns with this, as the probabilities are relatively close across all categories, indicating uncertainty. The propagation evidence, showing multiple replies driving the discussion, further supports the lack of definitive confirmation; the replies themselves likely contain varying perspectives and interpretations, not conclusive proof.",
+   "evidence_used": [
+    "claim",
+    "propagation",
+    "replies"
+   ]
+  }
+ ]
+}
